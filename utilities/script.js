@@ -17,3 +17,9 @@ for (let i = 0; i < themeBtns.length; i++) {
         localStorage.setItem("theme", theme);
     })
 }
+
+document.querySelectorAll('.dropend').forEach(el => {
+    el.addEventListener("click", function(e) {
+        e.stopPropagation()
+    })
+})

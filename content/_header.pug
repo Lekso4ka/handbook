@@ -1,26 +1,37 @@
 header
-    nav
-        ul
-            li
-                a(href=path + "index.html") Home
-            li
-                a(href="") About
-            li
-                Issues
-                ul
-                    li Stalin
-                    ul
-                        li
-                            a(href=path + "issues/last_days_of_soviet_dictator.html") The Last Days of the Soviet Dictator
-                        li
-                            a(href=path + "issues/joseph_stalin_paranoid_purge.html") Joseph Stalin's Paranoid Purge
-                        li
-                            a(href=path + "issues/world_that_made_stalin.html") The World That Made Stalin
-            li Change Design
-                ul
-                    li(data-action="theme" data-value="gzhel") Old Russian Ghzel
-                    li(data-action="theme" data-value="suprematism") Suprematism
-            li
-                a(href="") Documentation
-            li
-                a(href="") Disclaimer
+    nav.navbar.navbar-expand-sm
+        button.navbar-toggler(type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar")
+            span.navbar-toggler-icon
+        #navbar.offcanvas.offcanvas-start(data-bs-scroll="true" data-bs-backdrop="false")
+            .offcanvas-header
+                h5.offcanvas-title Navigation
+                button.btn-close(type="button" data-bs-dismiss="offcanvas")
+            ul.navbar-nav.offcanvas-body
+                if path === "./"
+                    li.nav-item
+                        a.nav-link(href=path + "index.html#about") About
+                else
+                    li.nav-item
+                        a.nav-link(href=path + "index.html") Home
+
+                li.nav-item.dropdown
+                    button.nav-link.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-expanded="true") Issues
+                    ul.dropdown-menu
+                        li.dropdown-item.dropend
+                            button.dropdown-toggle.nav-link(type="button" data-bs-toggle="dropdown" aria-expanded="false") Stalin
+                            ul.dropdown-menu
+                                li.dropdown-item
+                                    a.nav-link(href=path + "issues/last_days_of_soviet_dictator.html") The Last Days of the Soviet Dictator
+                                li.dropdown-item
+                                    a.nav-link(href=path + "issues/joseph_stalin_paranoid_purge.html") Joseph Stalin's Paranoid Purge
+                                li.dropdown-item
+                                    a.nav-link(href=path + "issues/world_that_made_stalin.html") The World That Made Stalin
+                li.nav-item.dropdown
+                    button.nav-link.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-expanded="false") Change Design
+                    ul.dropdown-menu
+                        li.nav-link.dropdown-item(data-action="theme" data-value="gzhel") Old Russian Ghzel
+                        li.nav-link.dropdown-item(data-action="theme" data-value="suprematism") Suprematism
+                li.nav-item
+                    a.nav-link(href="") Documentation
+                li.nav-item
+                    a.nav-link(href="") Disclaimer
