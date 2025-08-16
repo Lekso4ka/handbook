@@ -1,0 +1,17 @@
+aside
+    h2 Metadata Index
+    ul
+        li People
+        li Places
+        li Organizations
+        li Events
+    h2 Our universe
+    .map-container
+        #map.map
+script(src=path+"utilities/leaflet.js")
+script.
+    const map = new L.map('map').setView([55.7558, 37.6173], 5);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);

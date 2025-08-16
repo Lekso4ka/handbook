@@ -9,22 +9,24 @@
         z-index 10
         position fixed
         width 200px
-        background-color #D4AF3780
         top 0
         bottom 0
         left 0
         font-family "Next Art", fantasy
         font-weight 600
+        background-color transparent
+        #navbar
+            background-color #D4AF37af
         .navbar-nav
             display grid !important
             grid-template-columns 20px 60px 60px 20px 40px
             position fixed
+            padding 0
             top 0
             left 0
             bottom 0
             width 200px
             align-content flex-end
-
         .nav-item
             height 100%
             width 100vh
@@ -112,9 +114,13 @@
                     padding .2rem 1rem
                     &:hover
                         background-color #f00
+        @media screen and (min-width: 576px)
+            background-color #D4AF3780
+            #navbar
+                background-color transparent
     h2
         font-family "Next Art", fantasy
-        font-size 3rem
+        font-size 4vw
     p
         font-size 20px
         font-family NewsCycle, sans-serif
@@ -122,69 +128,99 @@
     .wrapper
         padding 0 24px
         background-color #D4AF3720
+        @media screen and (min-width: 576px)
+            padding 0 20px 0 220px
         @media screen and (min-width: 1200px)
             padding 0 50px 0 250px
     .home
         display grid
-        grid-template-columns repeat(3, 1fr)
         align-content flex-start
         align-items flex-start
         gap 0 2rem
+        @media screen and (min-width: 1200px)
+            grid-template-columns repeat(3, 1fr)
     .offcanvas
         width 200px
         padding: 0
     .offcanvas-header
         position absolute
         right 0
-        z-index 1
+        z-index 10
+        padding 10px
         .offcanvas-title
             display none
+        .btn-close
+            filter: invert(100%)
     .offcanvas-body
         padding 0
+        overflow visible
     .home_title
-        grid-column-end span 3
         display block
         padding 20vh 0
         h1
             font-family "Rodchenko Constructed", serif
-            font-size 7rem
+            font-size 8vw
             color #f00
         h2
             font-family "Rodchenko Grotesk"
             color #D4AF37
             text-align right
-    .home_design
-        padding-left 1rem
-        grid-column 2 / 4
-        display grid
-        grid-template-columns repeat(2, 1fr)
-        gap 1rem 2rem
-        position relative
-        &::before
-            content ""
-            background-color #D4AF37a1
-            width 10px
-            height 100%
-            position absolute
-        h3
-            background-color #f005
-            font-family "Rodchenko Grotesk"
-        img
-            float left
-            width 30%
-            margin-right 1rem
-        &+section
-            grid-column-start 1
-            grid-row-start 3
+    img, video
+        max-width 100%
+    @media screen and (min-width: 1200px)
+        #about
+            display grid
+            grid-column-end span 3
+            grid-template-columns repeat(2, 1fr) 300px
+            gap 1rem 2rem
+            background-image url("./img/suprematism/pic1.png")
+            background-size contain
+            background-repeat no-repeat
+            background-position right center
+            :nth-child(2)
+                grid-column-start 1
+                grid-row-start 2s
+            :nth-child(3)
+                grid-row-start 2
+                grid-row-end 3
+                grid-column-start 2
+            :nth-child(4)
+                grid-row-start 1
+                grid-column-start 2
+        .home_title
+            grid-column-end span 3
+        .home_design
+            padding-left 1rem
+            grid-column 2 / 4
+            display grid
+            grid-template-columns repeat(2, 1fr)
+            gap 1rem 2rem
+            position relative
+            &::before
+                content ""
+                background-color #D4AF37a1
+                width 10px
+                height 100%
+                position absolute
+            h3
+                background-color #f005
+                font-family "Rodchenko Grotesk"
+            img
+                float left
+                width 30%
+                margin-right 1rem
+            &+section
+                grid-column-start 1
+                grid-row-start 3
 
-    .home_design_top
-        //column-count 2
-        grid-column-end span 2
-    .home_issue
-        display grid
-        gap 1rem
-        img
-            width 100%
+        .home_design_top
+            //column-count 2
+            grid-column-end span 2
+        .home_issue
+            display grid
+            gap 1rem
+            img
+                width 100%
     .custom_btn
         align-self baseline
         background-color #000
@@ -197,25 +233,6 @@
 
     section
         margin-bottom 3rem
-    #about
-        display grid
-        grid-column-end span 3
-        grid-template-columns repeat(2, 1fr) 300px
-        gap 1rem 2rem
-        background-image url("./img/suprematism/pic1.png")
-        background-size contain
-        background-repeat no-repeat
-        background-position right center
-        :nth-child(2)
-            grid-column-start 1
-            grid-row-start 2s
-        :nth-child(3)
-            grid-row-start 2
-            grid-row-end 3
-            grid-column-start 2
-        :nth-child(4)
-            grid-row-start 1
-            grid-column-start 2
     .p1_2
         position relative
         display block
@@ -253,7 +270,7 @@
             width 100%
             height 100%
             background-image url(./img/suprematism/pic_1_3.png)
-            background-size auto 90%
+            background-size cover
             background-repeat no-repeat
             background-position right top
             z-index 1
@@ -282,6 +299,7 @@
     .p3_1
         position relative
         display block
+        height max-content
         img
             line-height 1
         &::after
@@ -296,11 +314,146 @@
             height 100%
             background-image url(./img/suprematism/pic_3_1.png)
             background-color red
-            background-size auto 93%
+            background-size contain
             background-repeat no-repeat
             background-position left top
-            z-index 1
             animation opacity 5s linear infinite
+            z-index 1
+    .caption
+        font-family "Rodchenko Constructed", serif
+        font-size 6rem
+        color #f00
+        line-height 1
+    .content
+        section
+            //height 100vh
+            box-sizing border-box
+            column-count 2
+            column-rule .2rem dashed red
+            padding 0
+            @media screen and (min-width: 1200px)
+                column-count 4
+            h2
+                column-span all
+                position relative
+                &::before
+                    content ""
+                    background-color #D4AF37a1
+                    width 50%
+                    height 10px
+                    position absolute
+                    top .8em
+                    z-index -1
+            &.section_2_1
+            &.section_1_1
+            &.section_3_1
+                column-count 1
+                padding 3rem 0
+                display grid
+                grid-template-columns 1fr 2fr
+                grid-template-rows auto auto auto 1fr
+                gap 1rem 2rem
+                align-content flex-start
+                align-items flex-start
+                .caption
+                    grid-column-end span 2
+                    margin 2rem 0
+                    text-align left
+                h1:not(.caption)
+                    grid-column-start 2
+                    font-family "Rodchenko Grotesk"
+                    color #D4AF37
+                    text-align right
+                figure
+                    grid-column-start 2
+                    grid-row-start 3
+                    grid-row-end span 2
+                    width 100%
+                p:not(.caption)
+                    grid-row-start 4
+                    column-count 2
+                    column-rule .3rem dashed red
+                    margin 0
+            &.section_1_1
+                figure
+                    grid-column-start 1
+                    grid-row-start 3
+                p:not(.caption)
+                    grid-row-start 4
+                    grid-column-start 2
+                    column-count 2
+                    column-rule .3rem dashed red
+                    margin 0
+            &.section_3_1
+                grid-template-rows auto auto 1fr
+                figure
+                    grid-column-start 1
+                    grid-row-start 2
+                    grid-row-end span 5
+                p:not(.caption)
+                    grid-row-start auto
+                    column-count 2
+                    column-rule .3rem dashed red
+                    margin 0
+                    &:nth-of-type(1)
+                        column-count 1
+                    &:nth-of-type(2)
+                        column-count 1
+            &.section_3_9
+                column-count 1
+        figure
+            position relative
+            height max-content
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction column
+            figcaption
+                font-size 50%
+                align-self flex-start
+            &.style1
+                &::before
+                    background-color: #ff000050;
+                figcaption
+                    background-color: #0005;
+                    color: #fff;
+                    padding: 8px;
+                    width: 60%;
+                    top: 50%;
+                    transform: rotate(-24deg);
+                    max-width: max-content;
+                    z-index: 2;
+                    position: absolute;
+            &.style2
+                &::before
+                    background-color: #d4af3780;
+                figcaption
+                    background-color: #f2f2f2;
+                    color: #f00;
+                    padding: 8px;
+                    width: 300px;
+                    top: 0;
+                    right: 0;
+                    transform: rotate(90deg) translate(200px, -300px);
+                    transform-origin: top left;
+                    z-index: 2;
+                    position: absolute;
+            &.style3
+                &::before
+                    background-color: #f2f2f280;
+                    backdrop-filter: invert(20%) contrast(100%);
+                figcaption
+                    background-color: #f00;
+                    color: #000;
+                    padding: 8px;
+                    width: 400px;
+                    max-width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 2;
+                    position: absolute;
+            &.style4 figcaption
+                    display none
 
 
 
@@ -311,67 +464,7 @@
 //.suprematism aside {
 //    /*display: none;*/
 //}
-//header {
-//    color: #fff;
-//}
-//.suprematism .content {
-//    display: grid;
-//    grid-template-columns: 1fr;
-//    grid-template-rows: 4fr 1fr;
-//}
-//.suprematism figure {
-//    display: flex;
-//    justify-content: center;
-//    align-items: center;
-//}
-//.suprematism figure>figcaption {
-//    position: absolute;
-//    background-color: #fff;
-//    color: #222;
-//    z-index: 2;
-//}
-//.suprematism section:nth-child(3n-2) figure::before {
-//    background-color: #ff000050;
-//}
-//
-//.suprematism section:nth-child(3n-2) figcaption {
-//    background-color: #0005;
-//    color: #fff;
-//    padding: 8px;
-//    width: 60%;
-//    top: 50%;
-//    transform: rotate(-24deg);
-//    max-width: max-content;
-//}
-//
-//.suprematism section:nth-child(3n-1) figure::before {
-//    background-color: #d4af3780;
-//}
-//
-//.suprematism section:nth-child(3n-1) figcaption {
-//    background-color: #f2f2f2;
-//    color: #f00;
-//    padding: 8px;
-//    width: 300px;
-//    top: 0;
-//    right: 0;
-//    transform: rotate(90deg) translate(200px, -300px);
-//    transform-origin: top left;
-//}
-//
-//.suprematism section:nth-child(3n) figure::before {
-//    background-color: #f2f2f280;
-//    backdrop-filter: invert(20%) contrast(100%);
-//}
-//
-//.suprematism section:nth-child(3n) figcaption {
-//    background-color: #f00;
-//    color: #000;
-//    padding: 8px;
-//    width: 400px;
-//    bottom: 0;
-//    left: 0;
-//}
+
 //
 //.suprematism .content main {
 //    display: grid;
