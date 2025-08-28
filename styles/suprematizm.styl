@@ -125,6 +125,8 @@
         font-size 20px
         font-family NewsCycle, sans-serif
         text-align justify
+        hyphens auto
+        text-wrap balance
     .wrapper
         padding 0 24px
         background-color #D4AF3720
@@ -214,7 +216,6 @@
                 grid-row-start 3
 
         .home_design_top
-            //column-count 2
             grid-column-end span 2
         .home_issue
             display grid
@@ -329,10 +330,12 @@
             //height 100vh
             box-sizing border-box
             column-count 2
-            column-rule .2rem dashed red
+            //column-rule .2rem dashed red
+            column-gap 2rem
             padding 0
             @media screen and (min-width: 1200px)
                 column-count 4
+                column-gap 2rem
             h2
                 column-span all
                 position relative
@@ -372,7 +375,7 @@
                 p:not(.caption)
                     grid-row-start 4
                     column-count 2
-                    column-rule .3rem dashed red
+                    column-gap 2rem
                     margin 0
             &.section_1_1
                 figure
@@ -382,7 +385,7 @@
                     grid-row-start 4
                     grid-column-start 2
                     column-count 2
-                    column-rule .3rem dashed red
+                    column-gap 2rem
                     margin 0
             &.section_3_1
                 grid-template-rows auto auto 1fr
@@ -393,7 +396,7 @@
                 p:not(.caption)
                     grid-row-start auto
                     column-count 2
-                    column-rule .3rem dashed red
+                    column-gap 2rem
                     margin 0
                     &:nth-of-type(1)
                         column-count 1
@@ -454,162 +457,93 @@
                     position: absolute;
             &.style4 figcaption
                     display none
+    aside
+        display grid
+        @media(min-width: 1200px)
+            grid-template-columns repeat(2, 1fr)
+            gap 2rem
+    #map
+        filter saturate(10) invert(1)
+    .meta-names
+        display grid;
+        grid-template-columns repeat(4, 1fr)
+        gap .5rem
+        li
+            cursor pointer
+            border 1px solid
+            text-align center
+            padding 4px 0
+            font-family "Rodchenko Grotesk", seif
+            color #d4af37
+            &.active
+                background-color black
+    .meta-content
+        padding 1rem 0
 
-
-
-//
-//.suprematism footer {
-//    color: #222;
-//}
-//.suprematism aside {
-//    /*display: none;*/
-//}
-
-//
-//.suprematism .content main {
-//    display: grid;
-//    grid-template-columns: 1fr 1fr 1fr 1fr;
-//    max-width: 100%;
-//    overflow-x: hidden;
-//    gap: 12px;
-//    align-items: flex-start;
-//    align-content: flex-start;
-//    justify-items: flex-start;
-//    justify-content: flex-start;
-//}
-//.suprematism main.issue_1 {
-//    grid-template-areas: "s2 s2 s1 s1" "s2 s2 s3 s4" "s5 s5 s3 s4";
-//}
-//.suprematism main.issue_2 {
-//    grid-template-areas: "s21 s21 s21 s23" "s25 s25 s26 s23" "s24 s24 s26 s22" ;
-//}
-//.suprematism main>* {
-//    width: 100%;
-//}
-///*.suprematism main>* figure {*/
-///*    width: 100%;*/
-///*}*/
-///*.suprematism main>* figure>img {*/
-///*    width: auto;*/
-///*}*/
-//.suprematism section {
-//    padding: 12px;
-//    box-sizing: border-box;
-//    align-items: flex-start;
-//    align-content: flex-start;
-//    justify-items: flex-start;
-//    justify-content: flex-start;
-//}
-//.suprematism .section_1_1 {
-//    /*grid-column: 5 / 7;*/
-//    background-color: #f008;
-//    /*grid-row: 1 / 2*/
-//    grid-area: s1;
-//}
-//.suprematism .section_1_2 {
-//    /*grid-column: 1 / 5;*/
-//    /*grid-row: 1 / span 2 ;*/
-//    background-color: #000;
-//    grid-area: s2;
-//}
-//.suprematism .section_1_3 {
-//    background-color: #d4af37;
-//    color: #222;
-//    /*grid-row-end: span 2;*/
-//    grid-area: s3;
-//}
-//.suprematism .section_1_4 {
-//    /*grid-row-end: span 2;*/
-//    grid-area: s4;
-//}
-//.suprematism .section_1_5 {
-//    background-color: #f2f2f280;
-//    color: #222;
-//    /*grid-column: 1 / 5;*/
-//    /*grid-row-start: 3;*/
-//    grid-area: s5;
-//}
-//.suprematism .section_2_1 {
-//    grid-area: s21;
-//}
-//.suprematism .section_2_2 {
-//    grid-area: s22;
-//}
-//.suprematism .section_2_3 {
-//    background-color: #f2f2f2;
-//    color: #000;
-//    grid-area: s23;
-//}
-//.suprematism .section_2_4 {
-//    background-color: #f2f2f280;
-//    color: #222;
-//    grid-area: s24;
-//}
-//.suprematism .section_2_5 {
-//    background-color: #f004;
-//    color: #f2f2f2;
-//    grid-area: s25;
-//}
-//.suprematism .section_2_6 {
-//    background-color: #000;
-//    color: #d4af37;
-//    grid-area: s26;
-//}
-//.suprematism main.issue_3 {
-//    grid-template-areas: "s32 s31 s31 s34" "s32 s31 s31 s39" "s32 s33 s35 s37" "s36 s33 s35 s37" "s36 s33 s35 s37" "s38 s38 s38 s38"  ;
-//}
-//.suprematism .section_3_1 {
-//    background-color: #f004;
-//    color: #000;
-//    grid-area: s31;
-//}
-//.suprematism .section_3_2 {
-//    background-color: #000;
-//    color: #d4af37;
-//    grid-area: s32;
-//}
-//.suprematism .section_3_3 {
-//    grid-area: s33;
-//}
-//.suprematism .section_3_4 {
-//    grid-area: s34;
-//}
-//.suprematism .section_3_5 {
-//    background-color: #f004;
-//    color: #000;
-//    grid-area: s35;
-//}
-//.suprematism .section_3_6 {
-//    background-color: #f004;
-//    color: #000;
-//    grid-area: s36;
-//}
-//.suprematism .section_3_7 {
-//    background-color: #f2f2f280;
-//    color: #000;
-//    grid-area: s37;
-//}
-//.suprematism .section_3_8 {
-//    background-color: #f008;
-//    color: #dedede;
-//    grid-area: s38;
-//}
-//.suprematism .section_3_9 {
-//    background-color: #d4af37;
-//    color: #000;
-//    grid-area: s39;
-//}
-//
-//.suprematism figure {
-//    /*height: 300px;*/
-//    width: 100%;
-//    background-color: #2e7d32;
-//}
-//
-//.suprematism .mark {
-//    bottom: 70px;
-//    right: 0;
-//    background-color: #fff8;
-//    color: #f00;
-//    font-weight: 600;
-//}
+        & > div
+            gap 1rem
+            flex-wrap wrap
+            &.active
+                display flex
+    .meta-line
+        grid-template-columns 1fr auto
+        display grid
+        gap .2rem
+        flex-grow: 1
+    .meta-text
+        min-width max-content
+        display flex
+        border 1px solid
+        justify-content: center;
+        align-items stretch
+        font-family "Rodchenko Constructed", serif
+        font-size 1.2em
+        .link
+            cursor pointer
+            display flex
+            align-items center
+            flex 1
+            padding 0 1rem
+            &:hover
+                background-color midnightblue
+    .sup-content
+        display flex
+        align-items stretch
+        gap .2rem
+        flex-wrap wrap
+        .sup
+            cursor pointer
+            display flex
+            justify-content: center;
+            align-items: center;
+            padding 5px
+            line-height 1
+            flex 1
+            border 1px solid
+            background-color #d4af3780;
+            &:hover
+                background-color #d4af37
+    .marker
+        //background-color black
+        border-left 10px solid transparent
+        border-right 10px solid transparent
+        border-bottom 20px solid blue
+    [data-type]
+        font-family "Rodchenko Grotesk", seif
+        line-height 1
+        &.show
+            border 1px solid
+            display inline-block
+            line-height 1
+            text-align center
+            background-color #D4AF37a1
+            padding 5px
+            margin 0
+            transition-property font-size, color, border, background
+            transition-duration 1s
+            &::before
+                content " "
+            &::after
+                content " "
+            &.active
+                background-color midnightblue

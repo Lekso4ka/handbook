@@ -58,4 +58,16 @@ figure::before {
     border: none !important;
     padding: 0 !important;
 }
+.meta-names li {
+    cursor: pointer;
+}
+.meta-names .active {
+    background: red;
+}
+.meta-content > * {
+    display: none;
+}
+.meta-content > .active {
+    display: block;
+}
 
