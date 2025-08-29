@@ -20,6 +20,7 @@
 .gzhel header .nav-link {
   color: inherit;
   padding: 0.1rem 0.2rem;
+  cursor: pointer;
 }
 .gzhel header .nav-link:hover {
   background-color: rgba(0,85,204,0.102);
@@ -66,15 +67,15 @@
     background-color: rgba(0,85,204,0.502);
     padding: 0.2rem;
   }
-  .gzhel header .dropdown-item {
+  .gzhel header .dropdown-menu .dropdown-item {
     padding: 0.4rem 0.2rem;
   }
-  .gzhel header .dropdown-item .nav-link {
+  .gzhel header .dropdown-menu .nav-link {
     color: #fff;
     width: 100%;
     text-align: left;
   }
-  .gzhel header .dropdown-item .nav-link:hover {
+  .gzhel header .dropdown-menu .nav-link:hover {
     background-color: #05c;
     color: #fff;
   }

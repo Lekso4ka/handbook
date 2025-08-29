@@ -132,12 +132,12 @@
 .suprematism header .nav-item .dropdown-menu .nav-link {
   color: #fff;
   width: 100%;
-  border-radius: 0.2rem;
   text-align: left;
   padding: 0.2rem 1rem;
 }
 .suprematism header .nav-item .dropdown-menu .nav-link:hover {
-  background-color: #f00;
+  background-color: #191970;
+  color: #dedede !important;
 }
 @media screen and (min-width: 576px) {
   .suprematism header {

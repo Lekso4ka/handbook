@@ -1,4 +1,5 @@
 const navbar = document.querySelector('#navbar');
+const bsOffcanvas = new bootstrap.Offcanvas(navbar)
 const main = document.querySelector('main');
 
 let theme = localStorage.getItem("theme");
@@ -20,7 +21,13 @@ for (let i = 0; i < themeBtns.length; i++) {
         localStorage.setItem("theme", theme);
     })
 }
-
+document.querySelectorAll('.nav-link').forEach(el => {
+    if (!el.nextElementSibling) {
+        el.addEventListener("click", function (e) {
+            bsOffcanvas.hide()
+        })
+    }
+})
 
 document.querySelectorAll('.dropend').forEach(el => {
     el.addEventListener("click", function(e) {
