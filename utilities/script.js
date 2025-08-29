@@ -1,3 +1,6 @@
+const navbar = document.querySelector('#navbar');
+const main = document.querySelector('main');
+
 let theme = localStorage.getItem("theme");
 if (!theme) {
     theme = "gzhel"
@@ -18,8 +21,17 @@ for (let i = 0; i < themeBtns.length; i++) {
     })
 }
 
+
 document.querySelectorAll('.dropend').forEach(el => {
     el.addEventListener("click", function(e) {
         e.stopPropagation()
     })
 })
+
+navbar.addEventListener('show.bs.offcanvas', function () {
+    console.log("click")
+    main.classList.add("show")
+});
+navbar.addEventListener('hide.bs.offcanvas', function () {
+    main.classList.remove("show")
+});

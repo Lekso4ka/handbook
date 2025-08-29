@@ -5,119 +5,16 @@
     color #dedede
     font-family NewsCycle, sans-serif
     font-weight bold
-    header
-        z-index 10
-        position fixed
-        width 200px
-        top 0
-        bottom 0
-        left 0
-        font-family "Next Art", fantasy
-        font-weight 600
-        background-color transparent
-        #navbar
-            background-color #D4AF37af
-        .navbar-nav
-            display grid !important
-            grid-template-columns 20px 60px 60px 20px 40px
+    main.show
+        &::before
+            content ""
             position fixed
-            padding 0
             top 0
             left 0
+            right 0
             bottom 0
-            width 200px
-            align-content flex-end
-        .nav-item
-            height 100%
-            width 100vh
-            transform-origin left top
-            display flex
-            justify-content center
-            position relative
-            &:nth-child(1)
-                background-color transparent
-                justify-content flex-end
-                transform rotate(-90deg) translate(-60px, 0)
-                .nav-link
-                    padding-right 40px
-                    color #000
-                    height 20px
-            &:nth-child(2)
-                background-color #000
-                justify-content flex-start
-                //transform rotate(-90deg) translate(-60px, 0)
-                height 60px
-                width 80vh
-                transform rotate(-90deg) translate(-60px, 0)
-                z-index 3
-                .nav-link
-                    padding-left 40px
-                    color #fff
-            &:nth-child(3)
-                background-color #f00
-                transform rotate(-90deg) translate(40vh, 0)
-                height 60px
-                width 40vh
-                z-index 1
-                .nav-link
-                    color #000
-                .dropdown-menu
-                    background-color #000
-            &:nth-child(4)
-                background-color #D4AF37
-                transform rotate(-90deg) translate(16vh, -20px)
-                justify-content flex-start
-                //transform rotate(-90deg) translate(-20px, 0)
-                width 30vh
-                z-index 2
-                height 40px
-                .nav-link
-                    color #000
-            &:nth-child(5)
-                background-color #000
-                transform rotate(-90deg) translate(-60px, 0)
-                //transform rotate(-90deg) translate(-40px, 0)
-                //width 100vh
-                height 40px
-                .nav-link
-                    color #D4AF37
-            .dropdown-menu
-                position fixed
-                z-index 10
-                left 200px
-                top 200px
-                transform rotate(90deg) translate(-100%)
-                height max-content
-                padding 0
-                background-color red
-                border-radius 0
-                bottom 0
-                transform-origin top left
-                &.show
-                    .dropdown-menu
-                        transform none
-                        top 100%
-                        left -1rem
-                        background-color #D4AF37
-                        .nav-link
-                            color #000
-                .dropdown-item
-                    background-color transparent
-                    position static
-                    padding 0
-                    border-radius .2rem
-                .nav-link
-                    color #fff
-                    width 100%
-                    border-radius .2rem
-                    text-align left
-                    padding .2rem 1rem
-                    &:hover
-                        background-color #f00
-        @media screen and (min-width: 576px)
-            background-color #D4AF3780
-            #navbar
-                background-color transparent
+            background-color #000c
+            overflow hidden
     h2
         font-family "Next Art", fantasy
         font-size 4vw

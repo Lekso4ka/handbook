@@ -1,0 +1,149 @@
+.suprematism header {
+  z-index: 10;
+  position: fixed;
+  width: 200px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  font-family: "Next Art", fantasy;
+  font-weight: 600;
+  background-color: transparent;
+}
+.suprematism header .custom_btn-nav {
+  width: 2rem;
+  height: 2rem;
+  background-color: #191970;
+  border-radius: 1px;
+  right: 0;
+  top: 0;
+  position: fixed;
+  padding: 0;
+}
+.suprematism header .custom_btn-nav svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+.suprematism header #navbar {
+  background-color: rgba(212,175,55,0.631);
+}
+.suprematism header .navbar-nav {
+  display: grid !important;
+  grid-template-columns: 20px 60px 60px 20px 40px;
+  position: fixed;
+  padding: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  align-content: flex-end;
+}
+.suprematism header .nav-item {
+  height: 100%;
+  width: 100vh;
+  transform-origin: left top;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.suprematism header .nav-item:nth-child(1) {
+  background-color: transparent;
+  justify-content: flex-end;
+  transform: rotate(-90deg) translate(-60px, 0);
+}
+.suprematism header .nav-item:nth-child(1) .nav-link {
+  padding-right: 40px;
+  color: #000;
+  height: 20px;
+}
+.suprematism header .nav-item:nth-child(2) {
+  background-color: #000;
+  justify-content: flex-start;
+  height: 60px;
+  width: 80vh;
+  transform: rotate(-90deg) translate(-60px, 0);
+  z-index: 3;
+}
+.suprematism header .nav-item:nth-child(2) .nav-link {
+  padding-left: 40px;
+  color: #fff;
+}
+.suprematism header .nav-item:nth-child(3) {
+  background-color: #f00;
+  transform: rotate(-90deg) translate(40vh, 0);
+  height: 60px;
+  width: 40vh;
+  z-index: 1;
+}
+.suprematism header .nav-item:nth-child(3) .nav-link {
+  color: #000;
+}
+.suprematism header .nav-item:nth-child(3) .dropdown-menu {
+  background-color: #000;
+}
+.suprematism header .nav-item:nth-child(4) {
+  background-color: #d4af37;
+  transform: rotate(-90deg) translate(16vh, -20px);
+  justify-content: flex-start;
+  padding-left: 0.2rem;
+  width: 30vh;
+  z-index: 2;
+  height: 40px;
+}
+.suprematism header .nav-item:nth-child(4) .nav-link {
+  color: #000;
+}
+.suprematism header .nav-item:nth-child(5) {
+  background-color: #000;
+  transform: rotate(-90deg) translate(-60px, 0);
+  height: 40px;
+}
+.suprematism header .nav-item:nth-child(5) .nav-link {
+  color: #d4af37;
+}
+.suprematism header .nav-item .dropdown-menu {
+  position: fixed;
+  z-index: 10;
+  left: 200px;
+  top: 200px;
+  transform: rotate(90deg) translate(-100%);
+  height: max-content;
+  padding: 0;
+  background-color: #f00;
+  border-radius: 0;
+  bottom: 0;
+  transform-origin: top left;
+}
+.suprematism header .nav-item .dropdown-menu.show .dropdown-menu {
+  transform: none;
+  top: 100%;
+  left: -1rem;
+  background-color: #d4af37;
+}
+.suprematism header .nav-item .dropdown-menu.show .dropdown-menu .nav-link {
+  color: #000;
+}
+.suprematism header .nav-item .dropdown-menu .dropdown-item {
+  background-color: transparent;
+  position: static;
+  padding: 0;
+  border-radius: 0.2rem;
+}
+.suprematism header .nav-item .dropdown-menu .nav-link {
+  color: #fff;
+  width: 100%;
+  border-radius: 0.2rem;
+  text-align: left;
+  padding: 0.2rem 1rem;
+}
+.suprematism header .nav-item .dropdown-menu .nav-link:hover {
+  background-color: #f00;
+}
+@media screen and (min-width: 576px) {
+  .suprematism header {
+    background-color: rgba(212,175,55,0.502);
+  }
+  .suprematism header #navbar {
+    background-color: transparent;
+  }
+}
