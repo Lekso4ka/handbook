@@ -1,0 +1,64 @@
+@import "./variables.styl"
+
+.gzhel
+    header
+        height 3rem
+        display flex
+        justify-content flex-end
+        font-size 16px
+        mso-width-source 100%
+        @media screen and (min-width: 576px)
+            justify-content center
+        .custom_btn-nav
+            outline none
+            box-shadow none
+            height 100%
+            border 1px solid gz-primary
+            padding .1rem .2rem
+            border-radius .3rem
+            svg
+                fill gz-primary
+                height 100%
+        .nav-link
+            color gz-primary
+            padding 0.1rem 0.2rem
+            &:hover
+                background-color gz-secondary-10
+                color gz-secondary
+            &.show
+                color gz-secondary
+        .dropdown-menu
+            background-color gz-secondary-50
+            backdrop-filter blur(2px)
+            border none
+            padding 0.2rem
+            .dropdown-item
+                background-color transparent
+                position static
+                padding .4rem .2rem
+                border-radius .2rem
+            .nav-link
+                color gz-white
+                width 100%
+                border-radius .2rem
+                text-align left
+                &:hover
+                    background-color gz-secondary
+        .offcanvas-header
+            height 3rem
+            padding-top 8px
+            padding-bottom 8px
+            display flex
+            justify-content space-between
+            color gz-primary
+        .offcanvas.show
+            border-right-color gz-secondary-10
+            .dropdown-menu
+                background-color transparent
+                padding 0 1rem
+                .dropdown-item
+                    padding 0
+            .nav-link
+                color inherit
+                &:hover
+                    background-color gz-secondary-10

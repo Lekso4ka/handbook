@@ -1,0 +1,92 @@
+@import "./variables.styl"
+
+.suprematism
+    footer
+        background-color su-additional
+        padding 1rem
+        margin 2rem 0
+        position relative
+        display grid
+        &>*
+            position relative
+            z-index 1
+        &::after
+            content ""
+            position absolute
+            top 1rem
+            left calc(100% - 4rem)
+            width 3rem
+            height 3rem
+            background linear-gradient(180deg, su-primary 20%, su-secondary)
+            border-radius 50%
+            animation 15s move-circle linear infinite
+        .footer_caption
+            font-family "Rodchenko Constructed", serif
+            color su-secondary
+            h5
+                display flex
+                gap 1rem
+                font-size 9vw
+                line-height 1
+        .footer_links
+            p
+                column-count 2
+                column-gap 2rem
+                hyphens auto
+                line-height 1.2
+                text-align left
+            a
+                font-family "Rodchenko Constructed", fantasy
+                line-height 1
+                padding 5px
+                hyphens auto
+                border 1px solid
+                display inline-block
+                text-align right
+                margin 4px 0 2px
+                &:hover
+                    background-color su-primary-50
+        .footer_copy
+            font-family "Rodchenko Grotesk", serif
+            word-spacing .3rem
+            text-align right
+            color su-primary
+            font-size 5vw
+            letter-spacing .1rem
+        @media screen and (min-width: 576px)
+            grid-template-columns 1fr 1fr
+            .footer_caption h5
+                font-size 5.8vw
+                flex-direction column
+                gap 0
+            .footer_links p
+                column-count 1
+            .footer_copy
+                font-size 1.5rem
+                grid-column-end span 2
+        @media screen and (min-width: 1200px)
+            grid-template-columns 1fr 2fr 1fr
+            gap 2rem
+            .footer_caption h5
+                font-size 3rem
+                flex-direction column
+                gap 0
+            .footer_links p
+                column-count 2
+                padding 0 1rem
+            .footer_copy
+                font-size 1.2rem
+                grid-column-end span 1
+                align-self flex-end
+        @media screen and (min-width: 1600px)
+            grid-template-columns auto 1fr auto
+            gap 2rem
+            .footer_caption h5
+                flex-direction row
+                gap 1rem
+            .footer_links p
+                max-width 600px
+                column-count 2
+                justify-self center
+            .footer_copy
+                align-self flex-start

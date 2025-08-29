@@ -1,10 +1,10 @@
 .suprematism {
   background-image: url("./img/suprematism/square.png");
   background-size: cover;
-  background-color: #222;
   background-attachment: fixed;
   color: #dedede;
   font-family: NewsCycle, sans-serif;
+  font-weight: bold;
 }
 .suprematism header {
   z-index: 10;
@@ -145,6 +145,7 @@
 }
 .suprematism p {
   font-size: 20px;
+  letter-spacing: 0.1rem;
   font-family: NewsCycle, sans-serif;
   text-align: justify;
   hyphens: auto;
@@ -152,7 +153,7 @@
 }
 .suprematism .wrapper {
   padding: 0 24px;
-  background-color: rgba(212,175,55,0.125);
+  background-color: rgba(212,175,55,0.059);
 }
 @media screen and (min-width: 576px) {
   .suprematism .wrapper {
@@ -562,7 +563,6 @@
 }
 @media (min-width: 1200px) {
   .suprematism aside {
-    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 }
@@ -646,7 +646,7 @@
   border-bottom: 20px solid #00f;
 }
 .suprematism [data-type] {
-  font-family: "Rodchenko Grotesk", seif;
+  font-family: "Rodchenko Constructed", seif;
   line-height: 1;
 }
 .suprematism [data-type].show {
@@ -660,12 +660,9 @@
   transition-property: font-size, color, border, background;
   transition-duration: 1s;
 }
-.suprematism [data-type].show::before {
-  content: " ";
-}
-.suprematism [data-type].show::after {
-  content: " ";
-}
 .suprematism [data-type].show.active {
   background-color: #191970;
+}
+.suprematism .hidden_char {
+  display: none;
 }

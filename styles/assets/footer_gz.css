@@ -1,0 +1,51 @@
+.gzhel footer {
+  display: grid;
+  padding: 2rem 0;
+  background-image: url("../img/ghzel/foot-bord.png");
+  background-size: auto 1.2rem;
+  background-position: center top;
+  background-repeat: repeat-x;
+  gap: 1rem;
+}
+.gzhel footer .footer_caption {
+  color: #039;
+  text-align: center;
+}
+.gzhel footer .footer_caption h5 {
+  font-size: 1.25rem;
+}
+.gzhel footer .footer_links p {
+  text-align: justify;
+  hyphens: auto;
+  margin-bottom: 0;
+}
+.gzhel footer .footer_links p::first-line {
+  margin-left: 0;
+}
+.gzhel footer .footer_links p::first-letter {
+  margin-right: 0.3rem;
+  padding-top: 1rem;
+}
+.gzhel footer .footer_links a {
+  color: #039;
+  text-decoration: underline;
+}
+.gzhel footer .footer_copy {
+  color: #05c;
+  font-size: 4.3vw;
+  text-align: center;
+}
+@media screen and (min-width: 576px) {
+  .gzhel footer {
+    grid-template-columns: auto 1fr;
+    gap: 1rem 2rem;
+  }
+  .gzhel footer .footer_caption {
+    text-align: left;
+  }
+  .gzhel footer .footer_copy {
+    grid-column-start: 2;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+}

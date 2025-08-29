@@ -1,10 +1,10 @@
 .suprematism
     background-image url("./img/suprematism/square.png")
     background-size cover
-    background-color #222
     background-attachment fixed
     color #dedede
     font-family NewsCycle, sans-serif
+    font-weight bold
     header
         z-index 10
         position fixed
@@ -123,13 +123,14 @@
         font-size 4vw
     p
         font-size 20px
+        letter-spacing .1rem
         font-family NewsCycle, sans-serif
         text-align justify
         hyphens auto
         text-wrap balance
     .wrapper
         padding 0 24px
-        background-color #D4AF3720
+        background-color #D4AF370f
         @media screen and (min-width: 576px)
             padding 0 20px 0 220px
         @media screen and (min-width: 1200px)
@@ -460,7 +461,7 @@
     aside
         display grid
         @media(min-width: 1200px)
-            grid-template-columns repeat(2, 1fr)
+            //grid-template-columns repeat(2, 1fr)
             gap 2rem
     #map
         filter saturate(10) invert(1)
@@ -529,7 +530,7 @@
         border-right 10px solid transparent
         border-bottom 20px solid blue
     [data-type]
-        font-family "Rodchenko Grotesk", seif
+        font-family "Rodchenko Constructed", seif
         line-height 1
         &.show
             border 1px solid
@@ -541,9 +542,7 @@
             margin 0
             transition-property font-size, color, border, background
             transition-duration 1s
-            &::before
-                content " "
-            &::after
-                content " "
             &.active
                 background-color midnightblue
+    .hidden_char
+        display none

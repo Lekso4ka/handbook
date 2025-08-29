@@ -1,0 +1,115 @@
+.suprematism footer {
+  background-color: #191970;
+  padding: 1rem;
+  margin: 2rem 0;
+  position: relative;
+  display: grid;
+}
+.suprematism footer>* {
+  position: relative;
+  z-index: 1;
+}
+.suprematism footer::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: calc(100% - 4rem);
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(180deg, #d4af37 20%, #f00);
+  border-radius: 50%;
+  animation: 15s move-circle linear infinite;
+}
+.suprematism footer .footer_caption {
+  font-family: "Rodchenko Constructed", serif;
+  color: #f00;
+}
+.suprematism footer .footer_caption h5 {
+  display: flex;
+  gap: 1rem;
+  font-size: 9vw;
+  line-height: 1;
+}
+.suprematism footer .footer_links p {
+  column-count: 2;
+  column-gap: 2rem;
+  hyphens: auto;
+  line-height: 1.2;
+  text-align: left;
+}
+.suprematism footer .footer_links a {
+  font-family: "Rodchenko Constructed", fantasy;
+  line-height: 1;
+  padding: 5px;
+  hyphens: auto;
+  border: 1px solid;
+  display: inline-block;
+  text-align: right;
+  margin: 4px 0 2px;
+}
+.suprematism footer .footer_links a:hover {
+  background-color: rgba(212,175,55,0.502);
+}
+.suprematism footer .footer_copy {
+  font-family: "Rodchenko Grotesk", serif;
+  word-spacing: 0.3rem;
+  text-align: right;
+  color: #d4af37;
+  font-size: 5vw;
+  letter-spacing: 0.1rem;
+}
+@media screen and (min-width: 576px) {
+  .suprematism footer {
+    grid-template-columns: 1fr 1fr;
+  }
+  .suprematism footer .footer_caption h5 {
+    font-size: 5.8vw;
+    flex-direction: column;
+    gap: 0;
+  }
+  .suprematism footer .footer_links p {
+    column-count: 1;
+  }
+  .suprematism footer .footer_copy {
+    font-size: 1.5rem;
+    grid-column-end: span 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .suprematism footer {
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+  }
+  .suprematism footer .footer_caption h5 {
+    font-size: 3rem;
+    flex-direction: column;
+    gap: 0;
+  }
+  .suprematism footer .footer_links p {
+    column-count: 2;
+    padding: 0 1rem;
+  }
+  .suprematism footer .footer_copy {
+    font-size: 1.2rem;
+    grid-column-end: span 1;
+    align-self: flex-end;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .suprematism footer {
+    grid-template-columns: auto 1fr auto;
+    gap: 2rem;
+  }
+  .suprematism footer .footer_caption h5 {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .suprematism footer .footer_links p {
+    max-width: 600px;
+    column-count: 2;
+    justify-self: center;
+  }
+  .suprematism footer .footer_copy {
+    align-self: flex-start;
+  }
+}

@@ -10,68 +10,6 @@
     padding: 0 calc(50vw - 550px);
   }
 }
-.gzhel header {
-  height: 3rem;
-  display: flex;
-  justify-content: flex-end;
-  font-size: 16px;
-  mso-width-source: 100%;
-}
-.gzhel header .navbar>.navbar-toggler {
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
-@media screen and (min-width: 576px) {
-  .gzhel header {
-    justify-content: center;
-  }
-}
-.gzhel header .nav-link {
-  color: #039;
-  padding: 0.1rem 0.2rem;
-}
-.gzhel header .nav-link:hover {
-  background-color: rgba(0,85,204,0.102);
-  color: #05c;
-}
-.gzhel header .nav-link.show {
-  color: #05c;
-}
-.gzhel header .dropdown-menu {
-  background-color: rgba(0,85,204,0.502);
-  backdrop-filter: blur(2px);
-  border: none;
-  padding: 0.2rem;
-}
-.gzhel header .dropdown-menu .dropdown-item {
-  background-color: transparent;
-  position: static;
-  padding: 0.4rem 0.2rem;
-  border-radius: 0.2rem;
-}
-.gzhel header .dropdown-menu .nav-link {
-  color: #fff;
-  width: 100%;
-  border-radius: 0.2rem;
-  text-align: left;
-}
-.gzhel header .dropdown-menu .nav-link:hover {
-  background-color: #05c;
-}
-.gzhel header .offcanvas.show .dropdown-menu {
-  background-color: transparent;
-  padding: 0 1rem;
-}
-.gzhel header .offcanvas.show .dropdown-menu .dropdown-item {
-  padding: 0;
-}
-.gzhel header .offcanvas.show .nav-link {
-  color: inherit;
-}
-.gzhel header .offcanvas.show .nav-link:hover {
-  background-color: rgba(0,85,204,0.102);
-}
 .gzhel .home_title {
   height: calc(100vh - 3rem);
   background-image: url("./img/ghzel/top.png");
@@ -332,7 +270,4 @@
     top: 5rem;
     width: calc(1100px / 5 * 2 - 2rem);
   }
-}
-.gzhel footer {
-  color: #add8e6;
 }

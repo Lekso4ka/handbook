@@ -1,3 +1,6 @@
+
+//@media screen and (min-width: 1200px)
+//@media screen and (min-width: 576px)
 .gzhel
     font-family Balkara, serif
     color #636060
@@ -5,55 +8,7 @@
         padding 0 24px
         @media screen and (min-width: 1200px)
             padding 0 calc(50vw - 550px)
-    header
-        height 3rem
-        display flex
-        justify-content flex-end
-        font-size 16px
-        mso-width-source 100%
-        .navbar>.navbar-toggler
-            border none
-            outline none
-            box-shadow none
-        @media screen and (min-width: 576px)
-            justify-content center
-        .nav-link
-            color #003399
-            padding 0.1rem 0.2rem
-            &:hover
-                background-color #0055cc1a
-                color #0055cc
-            &.show
-                color #0055cc
-        .dropdown-menu
-            background-color #0055cc80
-            backdrop-filter blur(2px)
-            border none
-            padding 0.2rem
-            //width max-content
-            .dropdown-item
-                background-color transparent
-                position static
-                padding .4rem .2rem
-                border-radius .2rem
-                //width max-content
-            .nav-link
-                color #fff
-                width 100%
-                border-radius .2rem
-                text-align left
-                &:hover
-                    background-color #0055cc
-        .offcanvas.show
-            .dropdown-menu
-                background-color transparent
-                padding 0 1rem
-                .dropdown-item
-                    padding 0
-            .nav-link
-                color inherit
-                &:hover
-                    background-color #0055cc1a
+
     .home_title
         height calc(100vh - 3rem)
         background-image url(./img/ghzel/top.png)
@@ -268,14 +223,6 @@
         aside
             position fixed
             height calc(100vh - 10rem)
-            //background-color green
             right calc(50vw - 550px)
             top 5rem
             width calc(1100px / 5 * 2 - 2rem)
-
-
-
-
-.gzhel footer {
-    color: lightblue;
-}

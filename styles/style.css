@@ -1,6 +1,15 @@
 @import "./fonts.css";
 @import "./reset.css";
+@import "./assets/animation.css";
+
+/* styles for gzhel */
+@import "./assets/footer_gz.css";
+@import "./assets/header_gz.css";
 @import "./gzhel.css";
+
+/* styles for suprematizm */
+@import "./assets/footer_su.css";
+@import "./assets/header_su.css";
 @import "./suprematizm.css";
 
 /*.content {*/
@@ -61,10 +70,6 @@
 /*    display: flex;*/
 /*}*/
 
-footer {
-    bottom: 0;
-    display: flex;
-}
 .content main {
     height: 100%;
     overflow: auto;
