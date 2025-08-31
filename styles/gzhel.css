@@ -262,3 +262,13 @@
   height: calc(5rem * 1.5);
   shape-outside: polygon(100% 20%, 0% 100%, 100% 100%);
 }
+.gzhel .section_1_1,
+.gzhel .section_2_1,
+.gzhel .section_3_1 {
+  display: none;
+}
+.gzhel main .section_1_1,
+.gzhel main .section_2_1,
+.gzhel main .section_3_1 {
+  display: block;
+}

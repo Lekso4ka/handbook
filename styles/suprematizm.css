@@ -300,6 +300,11 @@
   top: 0.8em;
   z-index: -1;
 }
+.suprematism .content section.section_2_2,
+.suprematism .content section.section_1_2,
+.suprematism .content section.section_3_2 {
+  margin-top: 2rem;
+}
 .suprematism .content section.section_2_1,
 .suprematism .content section.section_1_1,
 .suprematism .content section.section_3_1 {
@@ -437,5 +442,10 @@
   display: none;
 }
 .suprematism .hidden_char {
+  display: none;
+}
+.suprematism .content main .section_1_1,
+.suprematism .content main .section_2_1,
+.suprematism .content main .section_3_1 {
   display: none;
 }

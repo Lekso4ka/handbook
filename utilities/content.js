@@ -429,8 +429,7 @@ const data = {
         name: "Megrelia",
         coords: [42.52330104421747, 41.86820792100772],
         zoom: 5
-    },
-    
+    }
 }
 
 let n = `span(data-type="place" data-id="plMe") `
