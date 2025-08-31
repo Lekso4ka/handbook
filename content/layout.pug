@@ -10,8 +10,11 @@ html(lang="en")
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css" integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw==" crossorigin="anonymous" referrerpolicy="no-referrer")
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g==" crossorigin="anonymous" referrerpolicy="no-referrer")
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css")
+        link(rel="stylesheet" href="https://cdn.maptiler.com/maptiler-sdk-js/v3.6.1/maptiler-sdk.css")
         link(rel="stylesheet" href=path + "styles/style.css")
-        script(src=path + "utilities/leaflet.js")
+        script(src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js")
+        script(src="https://cdn.maptiler.com/maptiler-sdk-js/v3.6.1/maptiler-sdk.umd.min.js")
+        script(src="https://cdn.maptiler.com/leaflet-maptilersdk/v4.1.0/leaflet-maptilersdk.umd.min.js")
         script(src=path + "utilities/content.js")
 
 
@@ -22,10 +25,10 @@ html(lang="en")
             include ./_header
             block content
             include ./_footer
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.bundle.min.js" integrity="sha512-Tc0i+vRogmX4NN7tuLbQfBxa8JkfUSAxSFVzmU31nVdHyiHElPPy2cWfFacmCJKw0VqovrzKhdd2TSTMdAxp2g==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        script(src=path + "utilities/script.js")
+        script(src=path + "utilities/map.js")
         if path === "./"
             script(src=path + "utilities/home.js")
         else
             script(src=path + "utilities/meta.js")
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.bundle.min.js" integrity="sha512-Tc0i+vRogmX4NN7tuLbQfBxa8JkfUSAxSFVzmU31nVdHyiHElPPy2cWfFacmCJKw0VqovrzKhdd2TSTMdAxp2g==" crossorigin="anonymous" referrerpolicy="no-referrer")
-        script(src=path + "utilities/script.js")
-

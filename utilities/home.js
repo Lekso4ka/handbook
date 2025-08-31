@@ -1,4 +1,12 @@
-console.log("i am home")
+
+
+
+
+
+
+
+
+
 
 home = [
     "main",
@@ -44,7 +52,6 @@ i1 = [
     "main",
     "video"
 ]
-
 i2 = [
     "div",
     "section",

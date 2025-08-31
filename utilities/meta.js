@@ -1,9 +1,3 @@
-const mapTag = document.getElementById("map");
-const map = new L.map('map').setView([51, 210], 2);
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-}).addTo(map);
 
 const dataTags = document.querySelectorAll(`[data-type]`)
 const content = new Map()
@@ -31,10 +25,7 @@ dataTags.forEach((tag, i) => {
     setData(tag, i)
 })
 
-const Icon = L.divIcon({
-    className: "marker",
-    html: "<div></div>"
-})
+
 const createMetaLine = (data) => {
     const line = document.createElement("div");
     line.className = "meta-line"

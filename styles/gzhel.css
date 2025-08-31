@@ -90,7 +90,7 @@
 .gzhel footer {
   display: grid;
   padding: 2rem 0;
-  background-image: url("../img/ghzel/foot-bord.png");
+  background-image: url("./img/ghzel/foot-bord.png");
   background-size: auto 1.2rem;
   background-position: center top;
   background-repeat: repeat-x;
@@ -136,6 +136,14 @@
     grid-column-start: 2;
     font-size: 0.8rem;
     text-align: left;
+  }
+}
+.gzhel .section_0_5 .map-container {
+  height: 400px;
+}
+@media screen and (min-width: 576px) {
+  .gzhel .section_0_5 .map-container {
+    height: 60vh;
   }
 }
 .gzhel aside {

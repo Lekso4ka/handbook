@@ -1,3 +1,5 @@
+@import "./assets/variables.styl"
+
 @import "./assets/header_su.styl";
 @import "./assets/footer_su.styl";
 
@@ -24,7 +26,25 @@
             overflow hidden
     h2
         font-family "Next Art", fantasy
-        font-size 4vw
+        font-size 2rem
+        position relative
+        display flex
+        justify-content center
+        align-items center
+        letter-spacing .4rem
+        width max-content
+        transform-style preserve-3d
+        color su-white
+        font-weight bold
+        &::after
+            content attr(title)
+            position absolute
+            z-index -1
+            transform perspective(1500px) translateZ(-2rem) translateX(.5rem) translateY(.2rem)  skewX(-40deg) scaleY(70%)
+            color su-primary
+            perspective-origin bottom left
+
+
     p
         font-size 20px
         letter-spacing .1rem
