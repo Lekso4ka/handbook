@@ -16,6 +16,7 @@
 .gzhel header .custom_btn-nav svg {
   fill: #039;
   height: 100%;
+  width: auto;
 }
 .gzhel header .nav-link {
   color: inherit;
