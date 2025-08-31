@@ -21,6 +21,14 @@ for (let i = 0; i < themeBtns.length; i++) {
         theme = this.dataset.value;
         switchTheme(theme);
         localStorage.setItem("theme", theme);
+        if (theme === "gzhel") {
+            mtSu.removeFrom(map)
+            mtGz.addTo(map)
+        } else {
+            mtGz.removeFrom(map)
+            mtSu.addTo(map)
+            
+        }
     })
 }
 

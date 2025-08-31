@@ -146,6 +146,10 @@
     height: 60vh;
   }
 }
+.gzhel .section_0_5 #map {
+  height: 100%;
+  width: 100%;
+}
 .gzhel aside {
   gap: 2rem;
 }
