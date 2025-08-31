@@ -5,11 +5,13 @@
 /* styles for gzhel */
 @import "./assets/footer_gz.css";
 @import "./assets/header_gz.css";
+@import "./assets/meta_gz.css";
 @import "./gzhel.css";
 
 /* styles for suprematizm */
 @import "./assets/footer_su.css";
 @import "./assets/header_su.css";
+@import "./assets/meta_su.css";
 @import "./suprematizm.css";
 
 /*.content {*/

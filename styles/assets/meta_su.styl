@@ -1,0 +1,90 @@
+@import "./variables.styl"
+
+.suprematism
+    aside
+        padding-top 1rem
+        display grid
+        @media(min-width: 1200px)
+            grid-template-columns repeat(2, 1fr)
+            gap 2rem
+    #map
+        filter saturate(10) invert(1)
+    .meta-names
+        display grid;
+        grid-template-columns repeat(4, 1fr)
+        gap .5rem
+        li
+            cursor pointer
+            border 1px solid
+            text-align center
+            padding 4px 0
+            font-family "Rodchenko Grotesk", seif
+            color #d4af37
+            &.active
+                background-color black
+    .meta-content
+        padding 1rem 0
+
+        & > div
+            gap 1rem
+            flex-wrap wrap
+            &.active
+                display flex
+    .meta-line
+        grid-template-columns 1fr auto
+        display grid
+        gap .2rem
+        flex-grow: 1
+    .meta-text
+        min-width max-content
+        display flex
+        border 1px solid
+        justify-content: center;
+        align-items stretch
+        font-family "Rodchenko Constructed", serif
+        font-size 1.2em
+        .link
+            cursor pointer
+            display flex
+            align-items center
+            flex 1
+            padding 0 1rem
+            &:hover
+                background-color midnightblue
+    .sup-content
+        display flex
+        align-items stretch
+        gap .2rem
+        flex-wrap wrap
+        .sup
+            cursor pointer
+            display flex
+            justify-content: center;
+            align-items: center;
+            padding 5px
+            line-height 1
+            flex 1
+            border 1px solid
+            background-color #d4af3780;
+            &:hover
+                background-color #d4af37
+    .marker
+        //background-color black
+        border-left 10px solid transparent
+        border-right 10px solid transparent
+        border-bottom 20px solid blue
+    [data-type]
+        font-family "Rodchenko Constructed", seif
+        line-height 1
+        &.show
+            border 1px solid
+            display inline-block
+            line-height 1
+            text-align center
+            background-color #D4AF37a1
+            padding 5px
+            margin 0
+            transition-property font-size, color, border, background
+            transition-duration 1s
+            &.active
+                background-color midnightblue
