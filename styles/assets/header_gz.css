@@ -59,6 +59,9 @@
   .gzhel header {
     justify-content: center;
   }
+  .gzhel header .custom_btn-nav {
+    display: none;
+  }
   .gzhel header .nav-link {
     color: #039;
     border-radius: 0.2rem;
