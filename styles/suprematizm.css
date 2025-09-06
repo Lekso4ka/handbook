@@ -891,7 +891,7 @@
 }
 @media screen and (min-width: 1200px) {
   .suprematism .content section {
-    column-count: 3;
+    column-count: 4;
     column-gap: 2rem;
   }
 }
