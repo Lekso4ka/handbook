@@ -161,4 +161,81 @@
             width 30vw
             height calc(5rem * 1.5)
             shape-outside polygon(100% 20%, 0% 100%, 100% 100%)
+    .popup_container
+        position fixed
+        background-color gz-white-50
+        backdrop-filter blur(2px)
+        top 0
+        left 0
+        right 0
+        bottom 0
+        z-index 10
+        padding 2rem
+        display none
+        justify-content: center;
+        align-items: center;
+        &.active
+            display flex
+        .popup
+            box-sizing border-box
+            border-radius 3rem
+            border 2px solid gz-primary
+            padding 2rem
+            position relative
+            background-color gz-white
+            h2
+                margin .5rem 0 .2rem
+                font-size: 1rem;
+            p
+                font-size .4rem
+            .popup_close
+                outline none
+                box-shadow none
+                border 1px solid transparent
+                padding .1rem .2rem
+                border-radius .3rem
+                display flex
+                align-items center
+                justify-content center
+                height 36px
+                width 36px
+                top 0
+                right 1rem
+                position absolute
+                svg
+                    fill gz-primary
+                    height 28px
+                    width 28px
+            ul
+                //margin-bottom 1rem;
+                li
+                    display grid
+                    grid-template-columns auto 1fr
+                    gap 1rem
+                    margin-bottom 1rem
+                    font-size .4rem
+                    span
+                        color gz-secondary
+                a
+                    text-wrap wrap
+                    color gz-secondary-50
+                    &:hover
+                        color gz-secondary
+
+        @media screen and (min-width: 768px)
+            .popup
+                p
+                ul li
+                    font-size .6rem
+        @media screen and (min-width: 1200px)
+            .popup
+                min-width 60%
+                max-width 80%
+                .popup_close
+                    position absolute
+                h2
+                    font-size: 2rem;
+                p
+                ul li
+                    font-size 1rem
 

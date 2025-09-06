@@ -1,7 +1,20 @@
 const navbar = document.querySelector('#navbar');
 const bsOffcanvas = new bootstrap.Offcanvas(navbar)
 const main = document.querySelector('main');
+const popupBlock = document.querySelector('.popup_container');
+const popupClose = document.querySelector('.popup_close');
 
+function openDisc() {
+    popupBlock.classList.add("active")
+}
+popupBlock.addEventListener("click", (e) => {
+    if (e.target === e.currentTarget) {
+        popupBlock.classList.remove("active")
+    }
+})
+popupClose.addEventListener("click", (e) => {
+    popupBlock.classList.remove("active")
+})
 
 /* Change theme start */
 let theme = localStorage.getItem("theme");
