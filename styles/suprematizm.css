@@ -1136,3 +1136,26 @@
 .suprematism .hidden_char {
   display: none;
 }
+.suprematism .docs h3 {
+  color: #d4af37;
+  column-span: all;
+  font-weight: bold;
+  font-family: "Rodchenko Grotesk";
+  margin: 1rem 0;
+}
+.suprematism .docs article {
+  column-count: 2;
+  column-gap: 2rem;
+}
+.suprematism .docs img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.suprematism .docs ul {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1200px) {
+  .suprematism .docs article {
+    column-count: 4;
+  }
+}

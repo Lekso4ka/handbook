@@ -714,3 +714,44 @@
     font-size: 1rem;
   }
 }
+.gzhel .docs h1 {
+h1
+  font-family: "A la russ", serif;
+  text-transform: uppercase;
+  justify-self: center;
+  font-size: 5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #039;
+}
+.gzhel .docs h2 {
+  color: #05c;
+}
+.gzhel .docs img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 2px solid #2d2c2c;
+  border-radius: 100px 20px 90px 25px/20px 80px 30px 100px;
+  max-width: 100%;
+  padding: 0.2rem;
+}
+.gzhel .docs ul {
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+.gzhel .docs article {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 576px) {
+  .gzhel .docs .p_docs_1 {
+    width: 300px;
+    float: left;
+    margin-right: 1rem;
+  }
+  .gzhel .docs .p_docs_4 {
+    width: 200px;
+    float: right;
+    margin-left: 1rem;
+  }
+}
