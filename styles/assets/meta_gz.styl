@@ -2,31 +2,31 @@
 
 .gzhel
     aside
+        grid-row-start 2
         gap 2rem
+        display grid
+        grid-template-rows auto auto
         h2
             margin 0
+        @media screen and (min-width: 1200px)
+            grid-row-start 1
+            grid-column-start 2
+            height calc(100vh - 48px * 2)
+            display grid
+            grid-template-rows 1fr auto
     .meta_block
+        height 100%
         display grid
-        gap 1rem
+        gap .5rem
         grid-template-rows auto auto 1fr
+        overflow hidden
     .map_block
+        height 100%
         display grid
         gqp 1rem
         grid-template-rows auto 1fr
         .map-container
             height 100%
-    @media screen and (min-width: 1200px)
-        aside
-            position fixed
-            height calc(100vh - 48px * 2)
-            right calc(50vw - 550px)
-            width calc(1100px / 5 * 2 - 2rem)
-            display grid
-            grid-template-rows 1fr 1fr
-
-        article
-            height 100%
-
     .meta-names
         display flex;
         justify-content: center;
@@ -41,13 +41,9 @@
                 color gz-white
                 background-color gz-secondary-50
     .meta-content
-        //display none
-        //padding 1rem 0
         height 100%
-
+        overflow scroll
         & > div
-            //gap 1rem
-            //flex-wrap wrap
             max-height 100%
             overflow auto
             align-content flex-start
@@ -57,14 +53,7 @@
             &.active
                 display grid
     .meta-line
-        //grid-template-columns 1fr auto
-        //display grid
-        //gap .2rem
-        //flex-grow: 1
     .meta-text
-        //min-width max-content
-        //display flex
-        //border 1px solid
         justify-content: center;
         align-items stretch
         .link
@@ -73,27 +62,13 @@
             align-items center
             flex 1
             padding 0 1rem
-    .sup-content
-        display flex
-        align-items stretch
-        gap .2rem
-        flex-wrap wrap
-        .sup
-            cursor pointer
-            display flex
-            justify-content: center;
-            align-items: center;
-            padding 5px
-            line-height 1
-            flex 1
-            border 1px solid
-            background-color #d4af3780;
-            &:hover
-                background-color #d4af37
 
     [data-type]
         &.show
             text-decoration underline
             color gz-secondary
+            transition-property transform
+            transition-duration  2s
             &.active
                 background-color gz-secondary-10
+                transform translate(20px, 0)

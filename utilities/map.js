@@ -6,6 +6,10 @@ mapBlock.style.height = (mapBlock.getBoundingClientRect().width / 100) * size + 
 const mapTag = document.getElementById("map");
 const map = L.map('map').setView([59.51224061318297, 36.56994581222535], 3);
 
+const Icon = L.divIcon({
+    className: "marker",
+    html: "<div></div>"
+})
 
 var mtGz = L.maptiler.maptilerLayer({
     apiKey: key,
@@ -24,14 +28,4 @@ if (theme === "gzhel") {
 }
 
 
-
-
-//L.tileLayer('https://api.maptiler.com/maps/019900ab-eb56-7f85-b100-33c889e75051/style.json?key=71hxVyyr9sBdVKFsktTj', {
-//    attribution: '© OpenStreetMap contributors'
-//}).addTo(map);
-
-const Icon = L.divIcon({
-    className: "marker",
-    html: "<div></div>"
-})
 

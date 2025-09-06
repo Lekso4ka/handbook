@@ -482,6 +482,30 @@
     grid-row-start: 4;
   }
 }
+.suprematism .content main section.section_1_1,
+.suprematism .content main section.section_2_1,
+.suprematism .content main section.section_3_1 {
+  display: none;
+}
+.suprematism aside {
+  box-sizing: border-box;
+  padding: 1rem;
+  display: grid;
+  gap: 2rem;
+}
+@media screen and (min-width: 1200px) {
+  .suprematism aside {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.suprematism .meta_block {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+.suprematism .map_block {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
 .suprematism .meta-names {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1026,10 +1050,5 @@
   display: none;
 }
 .suprematism .hidden_char {
-  display: none;
-}
-.suprematism .content main .section_1_1,
-.suprematism .content main .section_2_1,
-.suprematism .content main .section_3_1 {
   display: none;
 }

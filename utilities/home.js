@@ -1,44 +1,5 @@
 
-
 const mapData = Object.entries(data).filter(el => el[1].type === "place")
-
-const createPopup = (data, home = false) => {
-    const popup = document.createElement("div")
-    popup.className = "popup"
-    const mainBlock = document.createElement("div")
-    mainBlock.className = "popup_main"
-    const caption = document.createElement("h2")
-    caption.innerText = data.name;
-    if (data.name.split(" ").length > 2) {
-        caption.style.fontSize = "16px"
-    }
-    
-    const link = document.createElement("a")
-    link.className = "custom_btn"
-    link.innerText = "Read more";
-    link.href = data.wiki;
-    link.target = "_blank";
-    mainBlock.append(caption, link)
-    popup.append(mainBlock)
-    if (data.articles.length) {
-        const artBlock = document.createElement("div")
-        artBlock.className = "popup_art"
-        const listCaption = document.createElement("h3")
-        listCaption.innerText = "Appears in:";
-        const list = document.createElement("ul")
-        data.articles.forEach((el) => {
-            const line = document.createElement("li")
-            const text = document.createElement("a")
-            text.innerText = articles[el].title
-            text.href = (home ? "." : "..") + articles[el].link
-            line.append(text)
-            list.appendChild(line)
-        })
-        artBlock.append(listCaption, list)
-        popup.append(artBlock)
-    }
-    return popup.outerHTML
-}
 
 mapData.forEach(el => {
     L.marker(el[1].coords, {icon: Icon}).addTo(map).bindPopup(createPopup(el[1], true))
