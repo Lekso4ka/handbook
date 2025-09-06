@@ -3,6 +3,7 @@
 
 @import "./assets/sections_gz.styl";
 @import "./assets/meta_gz.styl";
+@import "./assets/map_gz.styl";
 
 //@media screen and (min-width: 1200px)
 //@media screen and (min-width: 576px)
@@ -13,69 +14,6 @@
         padding 0 24px
         @media screen and (min-width: 1200px)
             padding 0 calc(50vw - 550px)
-
-    .home_title
-        height calc(100vh - 3rem)
-        background-image url(./img/ghzel/top.png)
-        background-size auto 80%
-        background-repeat no-repeat
-        background-position top center
-        display flex
-        flex-direction column
-        box-sizing border-box
-        padding-bottom 1rem
-        position relative
-        color #003399
-        justify-content center
-        @media screen and (min-width: 576px)
-            justify-content flex-end
-            background-size auto 75vh
-        &::before
-            content ""
-            position absolute
-            height 100%
-            background-color #fff8
-            width 100%
-            top 0
-            @media screen and (min-width: 576px)
-                background-color transparent
-                height 75vh
-        h1
-            font-family "A la russ", serif
-            text-transform uppercase
-            justify-self center
-            font-size 5rem
-            text-align center
-            position relative
-            z-index 1
-        h2
-            position absolute
-            z-index 1
-            text-align center
-            justify-self center
-            text-transform uppercase
-            font-size 2vw
-            margin 0
-            bottom 1rem
-            width 100%
-            @media screen and (min-width: 576px)
-                position relative
-                bottom 0
-                font-size 1.5vw
-
-    .home_design
-        article
-            padding-top 2rem
-            display grid
-            gap 1rem
-            img
-                width 100%
-            @media screen and (min-width: 576px)
-                grid-template-columns repeat(2, 1fr)
-                &:nth-of-type(2)
-                    div
-                        grid-row-start -1
-
     .custom_btn
         border-radius 50px
         border 2px solid #3b40d9
@@ -86,12 +24,9 @@
         padding .4rem 1rem
         width max-content
         margin 0 auto
-    .home_issue
-        display grid
-        justify-content center
-        gap 1rem
-        img
-            max-width 100%
+        &:disabled
+            cursor auto
+            opacity .4
     h2
         color #003399
         text-shadow 1px 1px 3px #0516536d
@@ -224,11 +159,4 @@
             width 30vw
             height calc(5rem * 1.5)
             shape-outside polygon(100% 20%, 0% 100%, 100% 100%)
-    .section_1_1
-    .section_2_1
-    .section_3_1
-        display none
-    main .section_1_1
-    main .section_2_1
-    main .section_3_1
-        display block
+

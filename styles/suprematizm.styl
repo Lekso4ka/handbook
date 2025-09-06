@@ -5,6 +5,7 @@
 
 @import "./assets/sections_su.styl";
 @import "./assets/meta_su.styl";
+@import "./assets/map_su.styl";
 
 .suprematism
     background-color black
@@ -15,6 +16,7 @@
     font-family NewsCycle, sans-serif
     font-weight bold
     main.show
+        overflow hidden
         &::before
             content ""
             position fixed
@@ -23,16 +25,18 @@
             right 0
             bottom 0
             background-color #000c
-            overflow hidden
+            z-index 9
+
+
     h2
         font-family "Next Art", fantasy
-        font-size 2rem
+        font-size 1.5rem
         position relative
         display flex
         justify-content center
         align-items center
-        letter-spacing .4rem
-        width max-content
+        letter-spacing .3rem
+        max-width max-content
         transform-style preserve-3d
         color su-white
         font-weight bold
@@ -40,11 +44,14 @@
             content attr(title)
             position absolute
             z-index -1
-            transform perspective(1500px) translateZ(-2rem) translateX(.5rem) translateY(.2rem)  skewX(-40deg) scaleY(70%)
+            transform perspective(1500px) translateZ(-1.5rem) translateX(.5rem) translateY(.15rem)  skewX(-40deg) scaleY(70%)
             color su-primary
             perspective-origin bottom left
-
-
+        @media screen and (min-width: 768px)
+            font-size 2rem
+            letter-spacing .4rem
+            &::after
+                transform perspective(1500px) translateZ(-2rem) translateX(.5rem) translateY(.2rem) skewX(-40deg) scaleY(70%)
     p
         font-size 20px
         letter-spacing .1rem
@@ -66,99 +73,30 @@
         gap 0 2rem
         @media screen and (min-width: 1200px)
             grid-template-columns repeat(3, 1fr)
-    .offcanvas
-        width 200px
-        padding: 0
-    .offcanvas-header
-        position absolute
-        right 0
-        z-index 10
-        padding 10px
-        .offcanvas-title
-            display none
-        .btn-close
-            filter: invert(100%)
-    .offcanvas-body
-        padding 0
-        overflow visible
-    .home_title
-        display block
-        padding 20vh 0
-        h1
-            font-family "Rodchenko Constructed", serif
-            font-size 8vw
-            color #f00
-        h2
-            font-family "Rodchenko Grotesk"
-            color #D4AF37
-            text-align right
     img, video
         max-width 100%
-    @media screen and (min-width: 1200px)
-        #about
-            display grid
-            grid-column-end span 3
-            grid-template-columns repeat(2, 1fr) 300px
-            gap 1rem 2rem
-            background-image url("./img/suprematism/pic1.png")
-            background-size contain
-            background-repeat no-repeat
-            background-position right center
-            :nth-child(2)
-                grid-column-start 1
-                grid-row-start 2s
-            :nth-child(3)
-                grid-row-start 2
-                grid-row-end 3
-                grid-column-start 2
-            :nth-child(4)
-                grid-row-start 1
-                grid-column-start 2
-        .home_title
-            grid-column-end span 3
-        .home_design
-            padding-left 1rem
-            grid-column 2 / 4
-            display grid
-            grid-template-columns repeat(2, 1fr)
-            gap 1rem 2rem
-            position relative
-            &::before
-                content ""
-                background-color #D4AF37a1
-                width 10px
-                height 100%
-                position absolute
-            h3
-                background-color #f005
-                font-family "Rodchenko Grotesk"
-            img
-                float left
-                width 30%
-                margin-right 1rem
-            &+section
-                grid-column-start 1
-                grid-row-start 3
-
-        .home_design_top
-            grid-column-end span 2
-        .home_issue
-            display grid
-            gap 1rem
-            img
-                width 100%
     .custom_btn
+        font-weight bold
         align-self baseline
-        background-color #000
+        background-color su-black
         color #f2f2f2
+        border 2px solid
         display flex
         padding .6rem 4rem
         width max-content
-        align-items centerr
+        align-items center
         font-family "Next Art", fantasy
+        &:hover
+            //color su-black
+            background-color su-primary-50
+        &:disabled
+            cursor auto
+            opacity .4
+            &:hover
+                background-color su-black
 
-    section
-        margin-bottom 3rem
+
+
     .p1_2
         position relative
         display block

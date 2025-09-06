@@ -1,0 +1,59 @@
+@import "./variables.styl"
+
+.suprematism
+    .map-container
+        width 100%
+        position relative
+    #map
+        height 100%
+        width 100%
+    .leaflet-control
+        display none
+    .leaflet-popup
+        font-family NewsCycle, sans-serif
+    .leaflet-popup-content-wrapper
+        box-shadow: 0 3px 14px rgba(su-secondary-33);
+        border-radius 0
+        background-color su-primary
+    .leaflet-container a.leaflet-popup-close-button
+        color su-black
+    .leaflet-popup-content
+        //
+    //.leaflet-popup-tip-container
+    .leaflet-popup-tip
+        background-color su-primary
+    .popup
+        display grid
+        //gap 1rem
+    .popup_main
+        padding .5rem 0
+        display grid
+        gap .5rem
+        h2
+            font-family "Rodchenko Constructed"
+            font-size 24px
+            justify-content flex-start
+        .custom_btn
+            justify-self flex-end
+    .popup_art
+        h3
+            font-weight bold
+            font-size 1.5rem
+            color su-black
+        ul
+            padding-left 1rem
+        li
+            color su-black
+            margin-bottom .2rem
+            position relative
+            &::before
+                content "-"
+                position absolute
+                left -1rem
+                font-size 2em
+                top -.4em
+            a
+                font-weight bold
+                color inherit
+                &:hover
+                    color su-white

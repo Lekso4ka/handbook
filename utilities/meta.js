@@ -89,6 +89,13 @@ const metaData = Array.from(content).reduce((acc, el) => {
 console.log(metaData)
 metaNames.forEach(name => {
     const tag = document.createElement("div")
+    metaData[name].sort((a,b) => {
+        if (a.order) {
+            return a.order > b.order ? 1 : -1
+        } else {
+            return a.name > b.name ? 1 : -1
+        }
+    })
     metaData[name].forEach(el => {
         tag.append(createMetaLine(el))
     })

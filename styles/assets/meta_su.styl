@@ -1,16 +1,6 @@
 @import "./variables.styl"
 
 .suprematism
-    aside
-        padding-top 1rem
-        display grid
-        @media(min-width: 1200px)
-            grid-template-columns repeat(2, 1fr)
-            gap 2rem
-        .map-container
-            height 400px
-    #map
-        height: 100%
     .meta-names
         display grid;
         grid-template-columns repeat(4, 1fr)
@@ -74,7 +64,7 @@
         //background-color black
         border-left 10px solid transparent
         border-right 10px solid transparent
-        border-bottom 20px solid blue
+        border-bottom 20px solid su-secondary
     [data-type]
         font-family "Rodchenko Constructed", seif
         line-height 1

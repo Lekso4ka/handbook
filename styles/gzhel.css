@@ -138,17 +138,116 @@
     text-align: left;
   }
 }
-.gzhel .section_0_5 .map-container {
-  height: 400px;
+.gzhel .section_0_1 {
+  height: calc(100vh - 3rem);
+  background-image: url("./img/ghzel/top.png");
+  background-size: auto 80%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-bottom: 1rem;
+  position: relative;
+  color: #039;
+  justify-content: center;
 }
 @media screen and (min-width: 576px) {
-  .gzhel .section_0_5 .map-container {
-    height: 60vh;
+  .gzhel .section_0_1 {
+    justify-content: flex-end;
+    background-size: auto 75vh;
   }
 }
-.gzhel .section_0_5 #map {
+.gzhel .section_0_1::before {
+  content: "";
+  position: absolute;
   height: 100%;
+  background-color: rgba(255,255,255,0.533);
   width: 100%;
+  top: 0;
+}
+@media screen and (min-width: 576px) {
+  .gzhel .section_0_1::before {
+    background-color: transparent;
+    height: 75vh;
+  }
+}
+.gzhel .section_0_1 h1 {
+  font-family: "A la russ", serif;
+  text-transform: uppercase;
+  justify-self: center;
+  font-size: 5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.gzhel .section_0_1 h2 {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  justify-self: center;
+  text-transform: uppercase;
+  font-size: 2vw;
+  margin: 0;
+  bottom: 1rem;
+  width: 100%;
+}
+@media screen and (min-width: 576px) {
+  .gzhel .section_0_1 h2 {
+    position: relative;
+    bottom: 0;
+    font-size: 1.5vw;
+  }
+}
+.gzhel .section_0_3 article {
+  padding-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+.gzhel .section_0_3 article img {
+  width: 100%;
+}
+@media screen and (min-width: 576px) {
+  .gzhel .section_0_3 article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gzhel .section_0_3 article:nth-of-type(2) div {
+    grid-row-start: -1;
+  }
+}
+.gzhel .section_0_4 .home_issue {
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.gzhel .section_0_4 .home_issue img {
+  max-width: 100%;
+}
+@media screen and (min-width: 576px) {
+  .gzhel .section_0_4 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+  }
+  .gzhel .section_0_4 h2 {
+    grid-column-end: span 2;
+  }
+}
+.gzhel .section_0_5 {
+  margin-bottom: 2rem;
+}
+.gzhel .section_1_1,
+.gzhel .section_2_1,
+.gzhel .section_3_1 {
+  display: none;
+}
+.gzhel main .section_1_1,
+.gzhel main .section_2_1,
+.gzhel main .section_3_1 {
+  display: block;
 }
 .gzhel aside {
   gap: 2rem;
@@ -181,13 +280,6 @@
   .gzhel article {
     height: 100%;
   }
-}
-.gzhel #map {
-  border-radius: 50%;
-}
-.gzhel #map img {
-  padding: 0;
-  border-radius: 0;
 }
 .gzhel .meta-names {
   display: flex;
@@ -250,6 +342,13 @@
 .gzhel .sup-content .sup:hover {
   background-color: #d4af37;
 }
+.gzhel [data-type].show {
+  text-decoration: underline;
+  color: #05c;
+}
+.gzhel [data-type].show.active {
+  background-color: rgba(0,85,204,0.102);
+}
 .gzhel .marker {
   width: 40px;
   height: 40px;
@@ -258,12 +357,95 @@
   background-color: rgba(0,85,204,0.102);
   cursor: pointer;
 }
-.gzhel [data-type].show {
-  text-decoration: underline;
+.gzhel .map_block {
+  display: grid;
+  gqp: 1rem;
+  grid-template-rows: auto 1fr;
+}
+.gzhel .map_container {
+  padding: 1rem;
+  position: relative;
+}
+.gzhel .map_container::after {
+  content: "";
+  background-image: url("./img/ghzel/map_hor.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 8;
+  pointer-events: none;
+}
+.gzhel #map {
+  height: 100%;
+  width: 100%;
+  clip-path: ellipse(50% 50% at center);
+  border-radius: 50%;
+}
+.gzhel #map img {
+  padding: 0;
+  border-radius: 0;
+}
+.gzhel .leaflet-control {
+  display: none;
+}
+.gzhel .leaflet-popup {
+  font-family: Balkara, serif;
+}
+.gzhel .leaflet-popup-content-wrapper {
+  box-shadow: 0 3px 14px rgba(0,85,204,0.502);
+}
+.gzhel .leaflet-container a.leaflet-popup-close-button {
   color: #05c;
 }
-.gzhel [data-type].show.active {
-  background-color: rgba(0,85,204,0.102);
+.gzhel .popup {
+  display: grid;
+  gap: 1rem;
+}
+.gzhel .popup_main {
+  padding: 1rem 0;
+  background-image: url("./img/ghzel/foot-bord.png");
+  background-size: auto 0.6rem;
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.gzhel .popup_main h2 {
+  font-family: "A la russ", serif;
+  font-size: 20px;
+  margin: 0;
+}
+.gzhel .popup_main .custom_btn {
+  padding: 0.2rem 0.6rem;
+  margin: 0;
+}
+.gzhel .popup_art h3 {
+  font-family: "A la russ", serif;
+  font-size: 16px;
+  text-align: left;
+  margin: 0;
+  color: #636060;
+}
+.gzhel .popup_art ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+}
+.gzhel .popup_art li {
+  color: #039;
+  margin-bottom: 0.2rem;
+}
+.gzhel .popup_art li a {
+  color: #05c;
+}
+.gzhel .popup_art li a:hover {
+  text-decoration: underline;
 }
 .gzhel {
   font-family: Balkara, serif;
@@ -277,83 +459,6 @@
     padding: 0 calc(50vw - 550px);
   }
 }
-.gzhel .home_title {
-  height: calc(100vh - 3rem);
-  background-image: url("./img/ghzel/top.png");
-  background-size: auto 80%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding-bottom: 1rem;
-  position: relative;
-  color: #039;
-  justify-content: center;
-}
-@media screen and (min-width: 576px) {
-  .gzhel .home_title {
-    justify-content: flex-end;
-    background-size: auto 75vh;
-  }
-}
-.gzhel .home_title::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  background-color: rgba(255,255,255,0.533);
-  width: 100%;
-  top: 0;
-}
-@media screen and (min-width: 576px) {
-  .gzhel .home_title::before {
-    background-color: transparent;
-    height: 75vh;
-  }
-}
-.gzhel .home_title h1 {
-  font-family: "A la russ", serif;
-  text-transform: uppercase;
-  justify-self: center;
-  font-size: 5rem;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-.gzhel .home_title h2 {
-  position: absolute;
-  z-index: 1;
-  text-align: center;
-  justify-self: center;
-  text-transform: uppercase;
-  font-size: 2vw;
-  margin: 0;
-  bottom: 1rem;
-  width: 100%;
-}
-@media screen and (min-width: 576px) {
-  .gzhel .home_title h2 {
-    position: relative;
-    bottom: 0;
-    font-size: 1.5vw;
-  }
-}
-.gzhel .home_design article {
-  padding-top: 2rem;
-  display: grid;
-  gap: 1rem;
-}
-.gzhel .home_design article img {
-  width: 100%;
-}
-@media screen and (min-width: 576px) {
-  .gzhel .home_design article {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .gzhel .home_design article:nth-of-type(2) div {
-    grid-row-start: -1;
-  }
-}
 .gzhel .custom_btn {
   border-radius: 50px;
   border: 2px solid #3b40d9;
@@ -365,13 +470,9 @@
   width: max-content;
   margin: 0 auto;
 }
-.gzhel .home_issue {
-  display: grid;
-  justify-content: center;
-  gap: 1rem;
-}
-.gzhel .home_issue img {
-  max-width: 100%;
+.gzhel .custom_btn:disabled {
+  cursor: auto;
+  opacity: 0.4;
 }
 .gzhel h2 {
   color: #039;
@@ -528,14 +629,4 @@
   width: 30vw;
   height: calc(5rem * 1.5);
   shape-outside: polygon(100% 20%, 0% 100%, 100% 100%);
-}
-.gzhel .section_1_1,
-.gzhel .section_2_1,
-.gzhel .section_3_1 {
-  display: none;
-}
-.gzhel main .section_1_1,
-.gzhel main .section_2_1,
-.gzhel main .section_3_1 {
-  display: block;
 }

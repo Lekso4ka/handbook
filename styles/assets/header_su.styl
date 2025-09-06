@@ -1,13 +1,28 @@
 @import "./variables.styl"
 
 .suprematism
+    .offcanvas
+        width 200px
+        padding 0
+    .offcanvas-header
+        position absolute
+        right 0
+        z-index 10
+        padding 10px
+        .offcanvas-title
+            display none
+        .btn-close
+            filter: invert(100%)
+    .offcanvas-body
+        padding 0
+        overflow visible
     header
         z-index 10
         position fixed
         width 200px
         top 0
         bottom 0
-        left 0
+        left -200px
         font-family "Next Art", fantasy
         font-weight 600
         background-color transparent
@@ -121,6 +136,7 @@
                         background-color su-additional
                         color su-text !important
         @media screen and (min-width: 576px)
+            left 0
             background-color su-primary-50
             #navbar
                 background-color transparent
