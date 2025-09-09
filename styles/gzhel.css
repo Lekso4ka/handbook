@@ -663,6 +663,91 @@
   height: calc(5rem * 1.5);
   shape-outside: polygon(100% 20%, 0% 100%, 100% 100%);
 }
+.gzhel .content .finish_2 .finish_left,
+.gzhel .content .finish_2 .finish_right {
+  width: 30%;
+  height: calc(17rem * 1.5);
+}
+@media screen and (min-width: 360px) {
+  .gzhel .content .finish_2 .finish_left,
+  .gzhel .content .finish_2 .finish_right {
+    width: 32%;
+    height: calc(13rem * 1.5);
+  }
+}
+@media screen and (min-width: 400px) {
+  .gzhel .content .finish_2 .finish_left,
+  .gzhel .content .finish_2 .finish_right {
+    height: calc(11rem * 1.5);
+  }
+}
+@media screen and (min-width: 450px) {
+  .gzhel .content .finish_2 .finish_left,
+  .gzhel .content .finish_2 .finish_right {
+    height: calc(10rem * 1.5);
+  }
+}
+@media screen and (min-width: 480px) {
+  .gzhel .content .finish_2 .finish_left,
+  .gzhel .content .finish_2 .finish_right {
+    width: 32%;
+    height: calc(9rem * 1.5);
+  }
+}
+@media screen and (min-width: 520px) {
+  .gzhel .content .finish_2 .finish_left,
+  .gzhel .content .finish_2 .finish_right {
+    width: 30%;
+    height: calc(8rem * 1.5);
+  }
+}
+@media screen and (min-width: 600px) {
+  .gzhel .content .finish_2 .finish_left,
+  .gzhel .content .finish_2 .finish_right {
+    width: 32%;
+    height: calc(7rem * 1.5);
+  }
+}
+@media screen and (min-width: 700px) {
+  .gzhel .content .finish_2 .finish_left,
+  .gzhel .content .finish_2 .finish_right {
+    height: calc(6rem * 1.5);
+  }
+}
+@media screen and (min-width: 800px) {
+  .gzhel .content .finish_2 .finish_left,
+  .gzhel .content .finish_2 .finish_right {
+    width: 30%;
+    height: calc(5rem * 1.5);
+  }
+}
+@media screen and (min-width: 850px) {
+  .gzhel .content .finish_2 .finish_left,
+  .gzhel .content .finish_2 .finish_right {
+    width: 35%;
+    height: calc(5rem * 1.5);
+  }
+}
+@media screen and (min-width: 900px) {
+  .gzhel .content .finish_2 .finish_left,
+  .gzhel .content .finish_2 .finish_right {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .gzhel .content .finish_2 .finish_left,
+  .gzhel .content .finish_2 .finish_right {
+    width: 32%;
+    height: calc(4rem * 1.5);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gzhel .content .finish_2 .finish_left,
+  .gzhel .content .finish_2 .finish_right {
+    width: 32%;
+    height: calc(7rem * 1.5);
+  }
+}
 .gzhel .content .finish_3 .finish_left,
 .gzhel .content .finish_3 .finish_right {
   width: 35%;
