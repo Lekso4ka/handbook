@@ -95,6 +95,7 @@
   background-position: center top;
   background-repeat: repeat-x;
   gap: 1rem;
+  margin-top: 3rem;
 }
 .gzhel footer .footer_caption {
   color: #039;
@@ -316,8 +317,10 @@
 }
 .gzhel .meta-line,
 .gzhel .meta-text {
-  justify-content: center;
-  align-items: stretch;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
 }
 .gzhel .meta-line .link,
 .gzhel .meta-text .link {
@@ -329,13 +332,20 @@
 }
 .gzhel [data-type].show {
   text-decoration: underline;
+  display: inline-block;
   color: #05c;
-  transition-property: transform;
-  transition-duration: 2s;
+  transition-property: transform, color, background;
+  transition-duration: 1s;
 }
 .gzhel [data-type].show.active {
-  background-color: rgba(0,85,204,0.102);
-  transform: translate(20px, 0);
+  background-color: rgba(0,85,204,0.502);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  color: #fff;
+  transform: scale(1.2);
+}
+.gzhel [data-type="date"] {
+  color: #3439c0;
 }
 .gzhel .marker {
   width: 40px;
@@ -439,6 +449,9 @@
   font-family: Balkara, serif;
   color: #636060;
 }
+.gzhel ::-webkit-scrollbar-thumb {
+  background-color: rgba(0,85,204,0.102);
+}
 .gzhel .wrapper {
   padding: 0 24px;
 }
@@ -460,7 +473,6 @@
 }
 .gzhel .custom_btn:disabled {
   cursor: auto;
-  opacity: 0.4;
 }
 .gzhel h2 {
   color: #039;
@@ -478,6 +490,7 @@
 }
 .gzhel p {
   text-align: justify;
+  hyphens: auto;
   margin-bottom: 1em;
   font-size: 16px;
 }
@@ -505,6 +518,7 @@
   .gzhel .content main {
     height: 100%;
     overflow: auto;
+    padding-right: 8px;
   }
 }
 .gzhel .content .caption {
@@ -529,6 +543,9 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+.gzhel .content .caption_3 {
+  letter-spacing: 0.005rem;
 }
 .gzhel .content h1:not(.caption) {
   font-size: 1.5vw;
@@ -585,6 +602,27 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+.gzhel .content .letter.letter_d::before {
+  height: calc(4em * 1.5);
+  width: calc(4em * 1.5 / 1.18);
+  float: left;
+  content: "";
+  background-image: url("./img/ghzel/letters/D.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 4px;
+}
+.gzhel .content .letter.letter_s::before {
+  height: calc(4em * 1.5);
+  width: calc(4em * 1.5 / 1.18);
+  float: left;
+  vertical-align: baseline;
+  content: "";
+  background-image: url("./img/ghzel/letters/S.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 4px;
+}
 .gzhel .content .p2_2 {
   float: left;
   margin-right: 1rem;
@@ -612,16 +650,103 @@
   text-align: center;
 }
 .gzhel .content .finish_left {
+  display: inline-block;
   float: left;
   width: 30vw;
   height: calc(5rem * 1.5);
   shape-outside: polygon(0% 20%, 100% 100%, 0 100%);
 }
 .gzhel .content .finish_right {
+  display: inline-block;
   float: right;
   width: 30vw;
   height: calc(5rem * 1.5);
   shape-outside: polygon(100% 20%, 0% 100%, 100% 100%);
+}
+.gzhel .content .finish_3 .finish_left,
+.gzhel .content .finish_3 .finish_right {
+  width: 35%;
+  height: calc(15rem * 1.5);
+}
+@media screen and (min-width: 360px) {
+  .gzhel .content .finish_3 .finish_left,
+  .gzhel .content .finish_3 .finish_right {
+    width: 32%;
+    height: calc(13rem * 1.5);
+  }
+}
+@media screen and (min-width: 400px) {
+  .gzhel .content .finish_3 .finish_left,
+  .gzhel .content .finish_3 .finish_right {
+    height: calc(11rem * 1.5);
+  }
+}
+@media screen and (min-width: 450px) {
+  .gzhel .content .finish_3 .finish_left,
+  .gzhel .content .finish_3 .finish_right {
+    height: calc(10rem * 1.5);
+  }
+}
+@media screen and (min-width: 480px) {
+  .gzhel .content .finish_3 .finish_left,
+  .gzhel .content .finish_3 .finish_right {
+    width: 32%;
+    height: calc(9rem * 1.5);
+  }
+}
+@media screen and (min-width: 520px) {
+  .gzhel .content .finish_3 .finish_left,
+  .gzhel .content .finish_3 .finish_right {
+    width: 30%;
+    height: calc(8rem * 1.5);
+  }
+}
+@media screen and (min-width: 600px) {
+  .gzhel .content .finish_3 .finish_left,
+  .gzhel .content .finish_3 .finish_right {
+    width: 32%;
+    height: calc(7rem * 1.5);
+  }
+}
+@media screen and (min-width: 700px) {
+  .gzhel .content .finish_3 .finish_left,
+  .gzhel .content .finish_3 .finish_right {
+    height: calc(6rem * 1.5);
+  }
+}
+@media screen and (min-width: 800px) {
+  .gzhel .content .finish_3 .finish_left,
+  .gzhel .content .finish_3 .finish_right {
+    width: 30%;
+    height: calc(5rem * 1.5);
+  }
+}
+@media screen and (min-width: 850px) {
+  .gzhel .content .finish_3 .finish_left,
+  .gzhel .content .finish_3 .finish_right {
+    width: 35%;
+    height: calc(5rem * 1.5);
+  }
+}
+@media screen and (min-width: 900px) {
+  .gzhel .content .finish_3 .finish_left,
+  .gzhel .content .finish_3 .finish_right {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .gzhel .content .finish_3 .finish_left,
+  .gzhel .content .finish_3 .finish_right {
+    width: 32%;
+    height: calc(4rem * 1.5);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gzhel .content .finish_3 .finish_left,
+  .gzhel .content .finish_3 .finish_right {
+    width: 32%;
+    height: calc(7rem * 1.5);
+  }
 }
 .gzhel .popup_container {
   position: fixed;
@@ -754,4 +879,20 @@ h1
     float: right;
     margin-left: 1rem;
   }
+}
+.gzhel .mark {
+  position: fixed;
+  width: max-content;
+  top: 1rem;
+  padding: 0 2.5rem 4rem 2rem;
+  display: grid;
+  color: #05c;
+  background-color: rgba(255,255,255,0.502);
+  background-image: url("./img/ghzel/mark.png");
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  box-sizing: content-box;
+  z-index: 1;
+  border-radius: 20px 20px 90px 25px/20px 80px 30px 100px;
 }

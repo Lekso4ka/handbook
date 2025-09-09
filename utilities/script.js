@@ -103,7 +103,6 @@ document.querySelectorAll('.dropend').forEach(el => {
 })
 
 navbar.addEventListener('show.bs.offcanvas', function () {
-    console.log("click")
     main.classList.add("show")
 });
 

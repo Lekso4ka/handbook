@@ -54,8 +54,10 @@
                 display grid
     .meta-line
     .meta-text
-        justify-content: center;
-        align-items stretch
+        align-items center
+        cursor pointer
+        display flex
+        gap 1rem
         .link
             cursor pointer
             display flex
@@ -66,9 +68,15 @@
     [data-type]
         &.show
             text-decoration underline
+            display inline-block
             color gz-secondary
-            transition-property transform
-            transition-duration  2s
+            transition-property transform, color, background
+            transition-duration 1s
             &.active
-                background-color gz-secondary-10
-                transform translate(20px, 0)
+                background-color gz-secondary-50
+                padding .2rem .4rem
+                border-radius .2rem
+                color gz-white
+                transform scale(1.2)
+    [data-type="date"]
+        color gz-additional

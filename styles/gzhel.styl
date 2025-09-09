@@ -8,6 +8,8 @@
 .gzhel
     font-family Balkara, serif
     color #636060
+    ::-webkit-scrollbar-thumb
+        background-color: gz-secondary-10;
     .wrapper
         padding 0 24px
         @media screen and (min-width: 1200px)
@@ -24,7 +26,7 @@
         margin 0 auto
         &:disabled
             cursor auto
-            opacity .4
+            //opacity .4
     h2
         color #003399
         text-shadow 1px 1px 3px #0516536d
@@ -39,6 +41,7 @@
         text-align center
     p
         text-align justify
+        hyphens auto
         margin-bottom 1em
         font-size 16px
         &:not(.no-letter)::first-letter
@@ -61,6 +64,8 @@
             main
                 height 100%
                 overflow auto
+                padding-right 8px
+
         .caption
             font-family "A la russ", serif
             font-size 5vw
@@ -83,6 +88,8 @@
                 background-position center
                 background-size contain
                 background-repeat no-repeat
+        .caption_3
+            letter-spacing 0.005rem
         h1:not(.caption)
             font-size 1.5vw
             max-width 80%
@@ -122,13 +129,33 @@
             &::first-letter
                 font-size 0
             &.letter_o::before
-                    height calc(4em * 1.5)
-                    width calc(4em * 1.5 / 1.18)
-                    float left
-                    content ""
-                    background-image url(./img/ghzel/letters/O.png)
-                    background-repeat no-repeat
-                    background-size contain
+                height calc(4em * 1.5)
+                width calc(4em * 1.5 / 1.18)
+                float left
+                content ""
+                background-image url(./img/ghzel/letters/O.png)
+                background-repeat no-repeat
+                background-size contain
+            &.letter_d::before
+                height calc(4em * 1.5)
+                width calc(4em * 1.5 / 1.18)
+                float left
+                content ""
+                background-image url(./img/ghzel/letters/D.png)
+                background-repeat no-repeat
+                background-size contain
+                margin-right 4px
+            &.letter_s::before
+                height calc(4em * 1.5)
+                width calc(4em * 1.5 / 1.18)
+                float left
+                vertical-align baseline
+                content ""
+                background-image url(./img/ghzel/letters/S.png)
+                background-repeat no-repeat
+                background-size contain
+                margin-right 4px
+
         .p2_2
             float left
             margin-right 1rem
@@ -152,15 +179,54 @@
             width 100%
             text-align center
         .finish_left
+            display inline-block
             float left
             width 30vw
             height calc(5rem * 1.5)
             shape-outside polygon(0% 20%, 100% 100%, 0 100%)
         .finish_right
+            display inline-block
             float right
             width 30vw
             height calc(5rem * 1.5)
             shape-outside polygon(100% 20%, 0% 100%, 100% 100%)
+        .finish_3
+            .finish_left
+            .finish_right
+                width 35%
+                height calc(15rem * 1.5)
+                @media screen and (min-width: 360px)
+                    width 32%
+                    height calc(13rem * 1.5)
+                @media screen and (min-width: 400px)
+                    height calc(11rem * 1.5)
+                @media screen and (min-width: 450px)
+                    height calc(10rem * 1.5)
+                @media screen and (min-width: 480px)
+                    width 32%
+                    height calc(9rem * 1.5)
+                @media screen and (min-width: 520px)
+                    width 30%
+                    height calc(8rem * 1.5)
+                @media screen and (min-width: 600px)
+                    width 32%
+                    height calc(7rem * 1.5)
+                @media screen and (min-width: 700px)
+                    height calc(6rem * 1.5)
+                @media screen and (min-width: 800px)
+                    width 30%
+                    height calc(5rem * 1.5)
+                @media screen and (min-width: 850px)
+                    width 35%
+                    height calc(5rem * 1.5)
+                @media screen and (min-width: 900px)
+                    width 30%
+                @media screen and (min-width: 1000px)
+                    width 32%
+                    height calc(4rem * 1.5)
+                @media screen and (min-width: 1200px)
+                    width 32%
+                    height calc(7rem * 1.5)
     .popup_container
         position fixed
         background-color gz-white-50
@@ -272,4 +338,19 @@
                 width 200px
                 float right
                 margin-left 1rem
-
+    .mark {
+        position fixed
+        width max-content
+        top 1rem
+        padding 0 2.5rem 4rem 2rem
+        display grid
+        color gz-secondary
+        background-color gz-white-50
+        background-image url("./img/ghzel/mark.png")
+        background-size contain
+        background-position bottom center
+        background-repeat no-repeat
+        box-sizing content-box
+        z-index 1
+        border-radius 20px 20px 90px 25px / 20px 80px 30px 100px
+    }

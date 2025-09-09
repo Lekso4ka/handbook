@@ -774,7 +774,6 @@
 }
 .suprematism .custom_btn:disabled {
   cursor: auto;
-  opacity: 0.4;
 }
 .suprematism .custom_btn:disabled:hover {
   background-color: #000;

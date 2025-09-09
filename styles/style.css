@@ -43,12 +43,3 @@
     height: 100%;
     overflow: auto;
 }
-
-/* TODO: dont forget */
-.mark {
-    position: fixed;
-    max-width: max-content;
-    padding: 8px;
-    display: grid;
-    opacity: 0;
-}

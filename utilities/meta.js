@@ -35,7 +35,6 @@ const createMetaLine = (data) => {
         text.innerHTML = `<span class="link">${data.name}</span>`;
         data.links?.forEach((link) => {
             link.innerHTML = `<a class="link" href="${data.wiki}" target="_blank">${link.textContent}</a>`;
-            console.log(link)
         })
     } else if (data.coords) {
         text.innerHTML = `<span class="link">${ data.name }</span>`;
@@ -46,12 +45,19 @@ const createMetaLine = (data) => {
         text.innerHTML += `<span>(${data.date})</span>`
     }
     line.addEventListener("click", () => {
-        const l = data.links?.[0]
-        data.links?.[0].scrollIntoView({block: "center"})
-        l.classList.add("active");
-        setTimeout(() => {
-            l.classList.remove("active");
-        }, 3000)
+        for (let i = 0; i < data?.links.length; i++) {
+            const el = data.links[i]
+            if (el.checkVisibility()) {
+                el.scrollIntoView({block: "center"})
+                el.classList.add("active");
+                setTimeout(() => {
+                    el.classList.remove("active");
+                }, 3000)
+                break;
+            }
+        }
+        
+        
     })
     const supTag = document.createElement("div");
     supTag.className = "sup-content"
@@ -81,18 +87,17 @@ const metaData = Array.from(content).reduce((acc, el) => {
     acc[el[1].type].push(el[1])
     return acc;
 }, {})
-//const metaData = Array.from(content)
-console.log(metaData)
+
 metaNames.forEach(name => {
     const tag = document.createElement("div")
-    metaData[name].sort((a,b) => {
+    metaData[name]?.sort((a,b) => {
         if (a.order) {
             return a.order > b.order ? 1 : -1
         } else {
             return a.name > b.name ? 1 : -1
         }
     })
-    metaData[name].forEach(el => {
+    metaData[name]?.forEach(el => {
         tag.append(createMetaLine(el))
     })
     tag.dataset.value = name;
@@ -101,7 +106,6 @@ metaNames.forEach(name => {
 
 metaTabs.forEach((el, i) => {
     el.addEventListener("click", (e) => {
-        console.log(metaTag.children[i])
         el.classList.toggle("active")
         metaTag.children[i].classList.toggle("active")
         dataTags.forEach(tg => {
