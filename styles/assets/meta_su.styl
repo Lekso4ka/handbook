@@ -23,18 +23,27 @@
         display grid
         grid-template-rows auto 1fr
     .meta-names
-        display grid;
-        grid-template-columns repeat(4, 1fr)
+        display flex;
+        //grid-template-columns repeat(4, 1fr)
+        justify-content space-between
+        flex-wrap wrap
         gap .5rem
         li
+            flex 40%
             cursor pointer
-            border 1px solid
+            //border 1px solid
             text-align center
             padding 4px 0
-            font-family "Rodchenko Grotesk", seif
+            font-family "Next Art", sans-serif
+            font-weight: bold;
             color #d4af37
             &.active
-                background-color black
+                background-color su-primary-63
+                color su-black
+        @media screen and (min-width: 576px)
+            flex-wrap nowrap
+            li
+                flex auto
     .meta-content
         padding 1rem 0
 

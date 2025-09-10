@@ -40,21 +40,6 @@
             position absolute
             top .8em
             z-index -1
-        //display flex
-        //justify-content center
-        //align-items center
-        //letter-spacing .3rem
-        //max-width max-content
-        //transform-style preserve-3d
-        //color su-white
-        //font-weight bold
-        //&::after
-        //    content attr(title)
-        //    position absolute
-        //    z-index -1
-        //    transform perspective(1500px) translateZ(-1.5rem) translateX(.5rem) translateY(.15rem)  skewX(-40deg) scaleY(70%)
-        //    color su-primary
-        //    perspective-origin bottom left
         @media screen and (min-width: 768px)
             font-size 2rem
             letter-spacing .4rem
@@ -110,6 +95,7 @@
         img
             line-height 1
         &::after
+            user-select none
             content ""
             position absolute
             display block
@@ -128,30 +114,13 @@
     .p1_3
         position relative
         display block
-        img
-            line-height 1
-        &::after
-            content ""
-            position absolute
-            display block
-            top 0
-            left 0
-            right 0
-            bottom 0
-            width 100%
-            height 100%
-            background-image url(./img/suprematism/pic_1_3.png)
-            background-size cover
-            background-repeat no-repeat
-            background-position right top
-            z-index 1
-            animation translate 10s linear 3s infinite
     .p1_6
         position relative
         display block
         img
             line-height 1
         &::after
+            user-select none
             content ""
             position absolute
             display block
@@ -174,6 +143,7 @@
         img
             line-height 1
         &::after
+            user-select none
             content ""
             position absolute
             display block
@@ -192,10 +162,16 @@
             z-index 1
     .caption
         font-family "Rodchenko Constructed", serif
-        font-size 6rem
+        font-size 3rem
         color #f00
         line-height 1
+        @media screen and (min-width: 576px)
+            font-size 6rem
     .content
+        li>a:not(.custom_button)
+            color su-secondary
+            &:hover
+                text-decoration underline
         section
             //height 100vh
             box-sizing border-box
@@ -286,51 +262,54 @@
             align-items: center;
             flex-direction column
             figcaption
-                font-size 50%
+                position absolute
+                bottom 0
+                font-size .5rem
+                background-color su-black-33
                 align-self flex-start
+                display none
+                z-index 2
+                [data-type]
+                    font-size 1em
+                @media screen and (min-width: 1200px)
+                    display block
+                @media screen and (min-width: 1400px)
+                    font-size 1rem
             &.style1
                 &::before
                     background-color: #ff000050;
+                    z-index: 2;
                 figcaption
-                    background-color: #0005;
+                    background-color: su-black-33;
                     color: #fff;
                     padding: 8px;
-                    width: 60%;
-                    top: 50%;
-                    transform: rotate(-24deg);
-                    max-width: max-content;
+                    bottom 0
                     z-index: 2;
                     position: absolute;
             &.style2
                 &::before
-                    background-color: #d4af3780;
+                    z-index: 2;
+                    background-color: su-secondary-31;
                 figcaption
-                    background-color: #f2f2f2;
-                    color: #f00;
+                    background-color: su-black-33;
                     padding: 8px;
-                    width: 300px;
-                    top: 0;
-                    right: 0;
-                    transform: rotate(90deg) translate(200px, -300px);
-                    transform-origin: top left;
                     z-index: 2;
                     position: absolute;
+                    bottom 0
             &.style3
                 &::before
+                    user-select none
+                    z-index: 2;
                     background-color: #f2f2f280;
                     backdrop-filter: invert(20%) contrast(100%);
                 figcaption
-                    background-color: #f00;
-                    color: #000;
+                    background-color: su-black-33;
                     padding: 8px;
-                    width: 400px;
                     max-width: 100%;
                     bottom: 0;
                     left: 0;
                     z-index: 2;
                     position: absolute;
-            &.style4 figcaption
-                    display none
     .popup_container
         position fixed
         background-color su-black
