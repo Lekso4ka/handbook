@@ -169,7 +169,7 @@
   }
 }
 .suprematism footer {
-  background-color: #191970;
+  border-top: 2px solid #191970;
   padding: 1rem;
   margin: 2rem 0;
   position: relative;
@@ -493,6 +493,15 @@
   display: grid;
   gap: 2rem;
 }
+.suprematism aside h2::before {
+  content: "";
+  background-color: rgba(212,175,55,0.631);
+  width: 50%;
+  height: 10px;
+  position: absolute;
+  top: 0.8em;
+  z-index: -1;
+}
 @media screen and (min-width: 1200px) {
   .suprematism aside {
     grid-template-columns: repeat(2, 1fr);
@@ -694,22 +703,6 @@
   font-family: "Next Art", fantasy;
   font-size: 1.5rem;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 0.3rem;
-  max-width: max-content;
-  transform-style: preserve-3d;
-  color: #fff;
-  font-weight: bold;
-}
-.suprematism h2::after {
-  content: attr(title);
-  position: absolute;
-  z-index: -1;
-  transform: perspective(1500px) translateZ(-1.5rem) translateX(0.5rem) translateY(0.15rem) skewX(-40deg) scaleY(70%);
-  color: #d4af37;
-  perspective-origin: bottom left;
 }
 @media screen and (min-width: 768px) {
   .suprematism h2 {
@@ -1135,6 +1128,15 @@
 .suprematism .hidden_char {
   display: none;
 }
+.suprematism .docs h2::before {
+  content: "";
+  background-color: rgba(212,175,55,0.631);
+  width: 50%;
+  height: 10px;
+  position: absolute;
+  top: 0.8em;
+  z-index: -1;
+}
 .suprematism .docs h3 {
   color: #d4af37;
   column-span: all;
@@ -1152,6 +1154,14 @@
 }
 .suprematism .docs ul {
   margin-bottom: 2rem;
+  list-style: disc inside;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.1rem;
+  font-family: NewsCycle, sans-serif;
+  text-align: justify;
+  hyphens: auto;
+  text-wrap: balance;
 }
 @media screen and (min-width: 1200px) {
   .suprematism .docs article {

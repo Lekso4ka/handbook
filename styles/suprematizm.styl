@@ -32,21 +32,21 @@
         font-family "Next Art", fantasy
         font-size 1.5rem
         position relative
-        display flex
-        justify-content center
-        align-items center
-        letter-spacing .3rem
-        max-width max-content
-        transform-style preserve-3d
-        color su-white
-        font-weight bold
-        &::after
-            content attr(title)
-            position absolute
-            z-index -1
-            transform perspective(1500px) translateZ(-1.5rem) translateX(.5rem) translateY(.15rem)  skewX(-40deg) scaleY(70%)
-            color su-primary
-            perspective-origin bottom left
+        //display flex
+        //justify-content center
+        //align-items center
+        //letter-spacing .3rem
+        //max-width max-content
+        //transform-style preserve-3d
+        //color su-white
+        //font-weight bold
+        //&::after
+        //    content attr(title)
+        //    position absolute
+        //    z-index -1
+        //    transform perspective(1500px) translateZ(-1.5rem) translateX(.5rem) translateY(.15rem)  skewX(-40deg) scaleY(70%)
+        //    color su-primary
+        //    perspective-origin bottom left
         @media screen and (min-width: 768px)
             font-size 2rem
             letter-spacing .4rem
@@ -394,6 +394,14 @@
     .hidden_char
         display none
     .docs
+        h2::before
+            content ""
+            background-color #D4AF37a1
+            width 50%
+            height 10px
+            position absolute
+            top .8em
+            z-index -1
         h3
             color su-primary
             column-span all
@@ -408,6 +416,14 @@
             margin-bottom 1rem
         ul
             margin-bottom 2rem
+            list-style disc inside
+            font-weight bold
+            font-size 20px
+            letter-spacing .1rem
+            font-family NewsCycle, sans-serif
+            text-align justify
+            hyphens auto
+            text-wrap balance
 
         @media screen and (min-width: 1200px)
             article
