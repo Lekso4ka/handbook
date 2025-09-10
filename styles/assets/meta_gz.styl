@@ -30,6 +30,7 @@
     .meta-names
         display flex;
         justify-content: center;
+        flex-wrap wrap
         gap .5rem
         li
             cursor pointer
@@ -37,9 +38,15 @@
             padding 2px 6px
             border-radius .4rem
             color gz-primary
+            flex 40%
+            box-sizing border-box
             &.active
                 color gz-white
                 background-color gz-secondary-50
+        @media screen and (min-width: 576px)
+            flex-wrap nowrap
+            li
+                flex auto
     .meta-content
         height 100%
         overflow scroll

@@ -26,6 +26,7 @@ document.body.className = theme;
 
 const switchTheme = function(name) {
     document.body.className = name;
+    window.scrollTo(0, 0)
 }
 
 const createPopup = (data, home = false) => {

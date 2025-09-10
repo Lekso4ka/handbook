@@ -334,14 +334,17 @@ const data = {
         name: "Princeton University Press"
     },
     "StDe": {
+        wiki: "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Joseph_Stalin",
         name: "Stalin's Death",
         date: "March 5, 1953",
     },
     "DtAf": {
+        wiki: "https://en.wikipedia.org/wiki/Doctors%27_plot",
         name: "Doctors' Affair",
         date: "1952-1953",
     },
     "MeCa": {
+        wiki: "https://en.wikipedia.org/wiki/Mingrelian_affair",
         name: "Megreli case",
         date: "1951-1952",
     },

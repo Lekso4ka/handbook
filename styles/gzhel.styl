@@ -54,7 +54,7 @@
             text-transform uppercase
             color #003399
     .content
-        padding 2rem 0
+        padding 2rem 0 0
         display grid
         gap 2rem
         position relative
@@ -68,7 +68,7 @@
 
         .caption
             font-family "A la russ", serif
-            font-size 5vw
+            font-size 8vw
             //white-space nowrap
             text-align center
             padding 300px 0 0
@@ -77,6 +77,8 @@
             line-height 1.05
             color #003399
             margin 0
+            @media screen and (min-width: 576px)
+                font-size: 5vw;
             &::before
                 content ""
                 height 300px
@@ -91,12 +93,14 @@
         .caption_3
             letter-spacing 0.005rem
         h1:not(.caption)
-            font-size 1.5vw
+            font-size 2.5vw
             max-width 80%
             letter-spacing 0.15rem
             color #3439c0
             text-align center
             margin 0 auto
+            @media screen and (min-width: 576px)
+                font-size: 1.5vw;
         main ul
             display grid
             line-height 1.3
@@ -155,6 +159,16 @@
                 background-repeat no-repeat
                 background-size contain
                 margin-right 4px
+            &.letter_i::before
+                height calc(4em * 1.5)
+                width calc(4em * 1.5 / 1.68)
+                float left
+                vertical-align baseline
+                content ""
+                background-image url(./img/ghzel/letters/I.png)
+                background-repeat no-repeat
+                background-size contain
+                margin-right 4px
 
         .p2_2
             float left
@@ -173,8 +187,6 @@
             float right
             width 36%
             margin-left 1rem
-            //figcaption
-            //    display none
         .finish
             width 100%
             text-align center
@@ -301,16 +313,29 @@
                 ul li
                     font-size 1rem
     .docs
-        h1
-            h1
+        .caption
             font-family "A la russ", serif
-            text-transform uppercase
-            justify-self center
-            font-size 5rem
+            font-size 8vw
             text-align center
+            padding 300px 0 0
             position relative
-            z-index 1
-            color gz-primary
+            letter-spacing 0.02rem
+            line-height 1.05
+            color #003399
+            margin 0
+            @media screen and (min-width: 576px)
+                font-size: 5vw;
+            &::before
+                 content ""
+                 height 300px
+                 width 100%
+                 position absolute
+                 top 0
+                 left 0
+                 background-image url(./img/ghzel/top_art.png)
+                 background-position center
+                 background-size contain
+                 background-repeat no-repeat
         h2
             color gz-secondary
         img

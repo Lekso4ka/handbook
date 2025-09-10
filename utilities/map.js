@@ -1,8 +1,10 @@
 const key = '71hxVyyr9sBdVKFsktTj';
 const mapBlock = document.querySelector('.map_container');
 const size = (826 * 100) / 1041
-mapBlock.style.height = (mapBlock.getBoundingClientRect().width / 100) * size + "px"
-
+const path = location.pathname.split("/").pop();
+if (path !== "documentation.html") {
+    mapBlock.style.height = (mapBlock.getBoundingClientRect().width / 100) * size + "px"
+}
 const mapTag = document.getElementById("map");
 const map = L.map('map').setView([59.51224061318297, 36.56994581222535], 3);
 

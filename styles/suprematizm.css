@@ -171,7 +171,7 @@
 .suprematism footer {
   border-top: 2px solid #191970;
   padding: 1rem;
-  margin: 2rem 0;
+  margin: 2rem 0 0;
   position: relative;
   display: grid;
 }
@@ -403,11 +403,13 @@
 .suprematism .section_0_3 h3 {
   background-color: rgba(255,0,0,0.333);
   font-family: "Rodchenko Grotesk";
+  text-align: right;
+  padding-right: 1rem;
 }
 .suprematism .section_0_3 img {
-  float: left;
-  width: 30%;
-  margin-right: 1rem;
+  max-width: 100%;
+  height: 10rem;
+  margin: 0 auto 1rem;
 }
 @media screen and (min-width: 576px) {
   .suprematism .section_0_3 .custom_btn {
@@ -426,14 +428,6 @@
 @media screen and (min-width: 1200px) {
   .suprematism .section_0_3 {
     grid-column: 2/4;
-    padding-left: 1rem;
-  }
-  .suprematism .section_0_3::before {
-    content: "";
-    background-color: rgba(212,175,55,0.631);
-    width: 10px;
-    height: 100%;
-    position: absolute;
   }
 }
 .suprematism .section_0_4 .home_issue {
@@ -703,6 +697,15 @@
   font-family: "Next Art", fantasy;
   font-size: 1.5rem;
   position: relative;
+}
+.suprematism h2::before {
+  content: "";
+  background-color: rgba(212,175,55,0.631);
+  width: 50%;
+  height: 10px;
+  position: absolute;
+  top: 0.8em;
+  z-index: -1;
 }
 @media screen and (min-width: 768px) {
   .suprematism h2 {
