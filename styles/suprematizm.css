@@ -1188,3 +1188,14 @@
     column-count: 4;
   }
 }
+.suprematism .mark {
+  position: fixed;
+  left: 40px;
+  top: 8px;
+  z-index: 21;
+  background-color: #191970;
+  padding: 8px;
+  box-sizing: border-box;
+  display: grid;
+  color: #d4af37;
+}
