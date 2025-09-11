@@ -349,46 +349,57 @@ const data = {
         date: "1951-1952",
     },
     "WWI": {
+        wiki: "https://en.wikipedia.org/wiki/World_War_I",
         name: "World War I",
         date: "1914-1918",
     },
     "WWII": {
+        wiki: "https://en.wikipedia.org/wiki/World_War_II",
         name: "World War II",
         date: "1939-1945",
     },
     "StGP": {
+        wiki: "https://en.wikipedia.org/wiki/Great_Purge",
         name: "Stalin’s Great Purge",
         date: "1936-1938",
     },
     "KaMa": {
+        wiki: "https://en.wikipedia.org/wiki/Katyn_massacre",
         name: "Katyn massacre",
         date: "April-May 1940",
     },
     "SpCW": {
+        wiki: "https://en.wikipedia.org/wiki/Spanish_Civil_War",
         name: "Spanish Civil War",
         date: "1936-1939",
     },
     "WiWa": {
+        wiki: "https://en.wikipedia.org/wiki/Winter_War",
         name: "Winter War",
         date: "1939-1940",
     },
     "BtSt": {
+        wiki: "https://en.wikipedia.org/wiki/Battle_of_Stalingrad",
         name: "Battle of Stalingrad",
         date: "17 July 1942 - 2 February 1943",
     },
     "RuCW": {
+        wiki: "https://en.wikipedia.org/wiki/Russian_Civil_War",
         name: "Russian Civil War",
         date: "1917-1922",
     },
     "CldW": {
+        wiki: "https://en.wikipedia.org/wiki/Cold_War",
         name: "Cold War",
         date: "1947-1991",
     },
     "OctR": {
+        wiki: "https://en.wikipedia.org/wiki/October_Revolution",
         name: "October Revolution",
         date: "7 November 1917",
     },
     "InSU": {
+        wiki: "https://en.wikipedia.org/wiki/Industrialization_in_the_Soviet_Union",
         name: "Industrialization in the Soviet Union",
         date: "1929-1941",
     },

@@ -150,4 +150,78 @@
     .content main section.section_2_1
     .content main section.section_3_1
         display none
-
+    .content section
+        &.section_1_1
+        &.section_2_1
+        &.section_3_1
+            grid-template-columns 1fr
+            column-count 1
+            padding 3rem 0
+            display grid
+            grid-template-rows auto auto 1fr
+            gap 1rem 2rem
+            align-content flex-start
+            align-items flex-start
+            .caption
+                margin 2rem 0
+                text-align left
+            h1:not(.caption)
+                font-family "Rodchenko Grotesk"
+                color #D4AF37
+                text-align right
+            figure
+                width 100%
+                figcaption
+                    transform translate(0, 70%)
+                    font-size .5rem
+            p:not(.caption)
+                margin 0
+            @media screen and (min-width: 400px)
+                p:not(.caption)
+                    column-count 2
+                    column-gap 1.5rem
+                figure
+                    figcaption
+                        font-size 1rem
+            @media screen and (min-width: 576px)
+                figure
+                    figcaption
+                        transform translate(0, 0)
+                        font-size 1rem
+            @media screen and (min-width: 1200px)
+                grid-template-columns 1fr 2fr
+                .caption
+                    grid-column-end span 2
+                h1:not(.caption)
+                    grid-column-start 2
+                figure
+                    grid-column-start 1
+                    grid-row-start 2
+                    grid-row-end span 5
+                    figcaption
+                        transform translate(0, 100%)
+                p:not(.caption)
+                    grid-row-start auto
+                    column-count 2
+                    column-gap 2rem
+        &.section_1_1
+            grid-template-rows auto auto auto 1fr
+            @media screen and (min-width: 1200px)
+                figure
+                    grid-column-start 2
+                    grid-row-start 3
+                    grid-row-end span 2
+                p:not(.caption)
+                    grid-row-start 4
+        &.section_1_1
+            grid-template-rows auto auto auto 1fr
+            //figure
+            //    figcaption
+            //        font-size .5rem
+            @media screen and (min-width: 1200px)
+                figure
+                    grid-column-start 1
+                    grid-row-start 3
+                p:not(.caption)
+                    grid-row-start 4
+                    grid-column-start 2
